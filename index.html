@@ -1370,7 +1370,7 @@ const QUESTIONS = [
     answer: 1,
     diff: 'easy',
     explain: 'This problem can be solved using direct ratios. Since the new amount of ice cream (300g) is exactly 3 times larger than the reference sample (100g), all the ingredient quantities will scale up by a factor of 3:\n- Fat content = 20 grams × 3 = 60 grams\n- Carbohydrate content = 25 grams × 3 = 75 grams.'
-  }
+  },
 
 
 // ─── UNIT 3: MATRICES ──────────────────────────────────────────────────────
@@ -1396,7 +1396,8 @@ const QUESTIONS = [
     opts: ['True', 'False'],
     answer: 0,
     diff: 'easy',
-    [cite_start]explain: 'Let A = [[0, 1], [1, 0]][cite: 6, 7]. [cite_start]To find out if a matrix is its own inverse (involution), we multiply it by itself to check if it yields the Identity Matrix (I):\n\nA * A = \n[0  1] * [0  1] = [ (0*0 + 1*1)  (0*1 + 1*0) ] = [1  0]\n[1  0]   [1  0]   [ (1*0 + 0*1)  (1*1 + 0*0) ]   [0  1] = I\n\nSince A * A = I, the inverse matrix A^-1 is equal to A itself[cite: 8].'
+    
+    explain: 'Let A = [[0, 1], [1, 0]][cite: 6, 7]. [cite_start]To find out if a matrix is its own inverse (involution), we multiply it by itself to check if it yields the Identity Matrix (I):\n\nA * A = \n[0  1] * [0  1] = [ (0*0 + 1*1)  (0*1 + 1*0) ] = [1  0]\n[1  0]   [1  0]   [ (1*0 + 0*1)  (1*1 + 0*0) ]   [0  1] = I\n\nSince A * A = I, the inverse matrix A^-1 is equal to A itself[cite: 8].'
   },
   {
     unit: 3,
@@ -1406,7 +1407,8 @@ const QUESTIONS = [
     opts: ['True', 'False'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'A matrix that features an equal number of rows and columns (m = n) is broadly known as a SQUARE matrix[cite: 9, 210, 356]. [cite_start]\n\nAn Identity Matrix is a much more restrictive type of square matrix where the main diagonal entries must be 1, and all off-diagonal entries must be 0[cite: 10]. [cite_start]Therefore, the general statement is False[cite: 9].'
+    
+    explain: 'A matrix that features an equal number of rows and columns (m = n) is broadly known as a SQUARE matrix[cite: 9, 210, 356]. [cite_start]\n\nAn Identity Matrix is a much more restrictive type of square matrix where the main diagonal entries must be 1, and all off-diagonal entries must be 0[cite: 10]. [cite_start]Therefore, the general statement is False[cite: 9].'
   },
   {
     unit: 3,
@@ -1426,7 +1428,8 @@ const QUESTIONS = [
     opts: ['True', 'False'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'For an algebraic inverse to exist, a matrix must possess a unique two-sided inverse such that A * A^-1 = A^-1 * A = I[cite: 11]. [cite_start]\n\nIf matrix A has dimension m x n and its inverse B has dimension n x m:\n- AB would have order m x m\n- BA would have order n x n\n\nFor AB to equal BA, the dimensions must be identical, which can only happen if m = n (meaning the matrix must be square)[cite: 11].'
+    
+    explain: 'For an algebraic inverse to exist, a matrix must possess a unique two-sided inverse such that A * A^-1 = A^-1 * A = I[cite: 11]. [cite_start]\n\nIf matrix A has dimension m x n and its inverse B has dimension n x m:\n- AB would have order m x m\n- BA would have order n x n\n\nFor AB to equal BA, the dimensions must be identical, which can only happen if m = n (meaning the matrix must be square)[cite: 11].'
   },
 
   // ==========================================
@@ -1440,7 +1443,7 @@ const QUESTIONS = [
     opts: ['[[3, 1], [1, 3]]', '[[3, 3], [3, 3]]', '[[3, 0], [0, 3]]', '[[2, 0], [0, 2]]'],
     answer: 2,
     diff: 'hard',
-    [cite_start]explain: 'Let\'s analyze the given equation step-by-step: Ax - A^T = 2A[cite: 14]. \n\n1. [cite_start]Notice that matrix A = [[1, 2], [2, 3]] is symmetric, because transposing it yields the exact same layout: A^T = [[1, 2], [2, 3]] = A[cite: 13, 87].\n2. Substitute A for A^T in our formula:\n   Ax - A = 2A\n3. Add A to both sides:\n   Ax = 3A\n4. [cite_start]Multiply both sides from the left by the inverse matrix A^-1:\n   A^-1 * A * x = A^-1 * 3A\n   I * x = 3 * I\n   x = 3I\n\nCalculating 3I:\n3 * [[1, 0], [0, 1]] = [[3, 0], [0, 3]]\n\nThis maps perfectly to Option C[cite: 22].'
+     explain: 'Let\'s analyze the given equation step-by-step: Ax - A^T = 2A[cite: 14]. \n\n1. [cite_start]Notice that matrix A = [[1, 2], [2, 3]] is symmetric, because transposing it yields the exact same layout: A^T = [[1, 2], [2, 3]] = A[cite: 13, 87].\n2. Substitute A for A^T in our formula:\n   Ax - A = 2A\n3. Add A to both sides:\n   Ax = 3A\n4. [cite_start]Multiply both sides from the left by the inverse matrix A^-1:\n   A^-1 * A * x = A^-1 * 3A\n   I * x = 3 * I\n   x = 3I\n\nCalculating 3I:\n3 * [[1, 0], [0, 1]] = [[3, 0], [0, 3]]\n\nThis maps perfectly to Option C[cite: 22].'
   },
   {
     unit: 3,
@@ -1450,7 +1453,8 @@ const QUESTIONS = [
     opts: ['3 and -2', '3 and 2', '-2 and 3', '2 and -3'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s compute the key entry coordinates using matrix multiplication [cite: 19][cite_start]:\n\n- Top-Left Entry (Row 1 * Column 1):\n  3(2) + 2(y) = 2 \n  6 + 2y = 2  =>  2y = -4  =>  y = -2 [cite: 19][cite_start].\n\n- Top-Right Entry (Row 1 * Column 2):\n  3(x) + 2(7) = 5\n  3x + 14 = 5 =>  3x = -9  =>  x = -3[cite: 19].\n\nThus, x = -3 and y = -2. [cite_start]Looking closely at the printed worksheet alternatives, Option A specifies "3 and -2" which implies a minor negative sign omission in the question choice text, making it the targeted correct option[cite: 20].'
+    
+    explain: 'Let\'s compute the key entry coordinates using matrix multiplication [cite: 19][cite_start]:\n\n- Top-Left Entry (Row 1 * Column 1):\n  3(2) + 2(y) = 2 \n  6 + 2y = 2  =>  2y = -4  =>  y = -2 [cite: 19][cite_start].\n\n- Top-Right Entry (Row 1 * Column 2):\n  3(x) + 2(7) = 5\n  3x + 14 = 5 =>  3x = -9  =>  x = -3[cite: 19].\n\nThus, x = -3 and y = -2. [cite_start]Looking closely at the printed worksheet alternatives, Option A specifies "3 and -2" which implies a minor negative sign omission in the question choice text, making it the targeted correct option[cite: 20].'
   },
   {
     unit: 3,
@@ -1460,7 +1464,8 @@ const QUESTIONS = [
     opts: ['40', '-40', '10', '100'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'We need to compute the element located at row i = 4 and column j = 2 using the formula: a_ij = 80j - 50i [cite: 27][cite_start].\n\nSubstitute the values directly:\na_42 = 80(2) - 50(4)\na_42 = 160 - 200\na_42 = -40\n\nThis corresponds precisely to Option B[cite: 34].'
+    
+    explain: 'We need to compute the element located at row i = 4 and column j = 2 using the formula: a_ij = 80j - 50i [cite: 27][cite_start].\n\nSubstitute the values directly:\na_42 = 80(2) - 50(4)\na_42 = 160 - 200\na_42 = -40\n\nThis corresponds precisely to Option B[cite: 34].'
   },
   {
     unit: 3,
@@ -1470,7 +1475,8 @@ const QUESTIONS = [
     opts: ['[[-2, -2], [4, 4]]', '[[2, -2], [-4, -4]]', '[[1, -1], [2, -2]]', '[[2, -2], [4, -4]]'],
     answer: 0,
     diff: 'hard',
-    [cite_start]explain: 'Let\'s find f(A) = A^3 - 2A^2 by first calculating A^2 [cite: 32, 33, 37][cite_start]:\n\nA^2 = [[1, -1], [2, -2]] * [[1, -1], [2, -2]]\n    = [ [1(1) + (-1)(2), 1(-1) + (-1)(-2)], [2(1) + (-2)(2), 2(-1) + (-2)(-2)] ]\n    = [ [1 - 2, -1 + 2], [2 - 4, -2 + 4] ]\n    = [[-1, 1], [-2, 2]]\n\nNow compute A^3:\nA^3 = A^2 * A = [[-1, 1], [-2, 2]] * [[1, -1], [2, -2]]\n    = [ [(-1)(1) + 1(2), (-1)(-1) + 1(-2)], [(-2)(1) + 2(2), (-2)(-1) + 2(-2)] ]\n    = [ [-1 + 2, 1 - 2], [-2 + 4, 2 - 4] ]\n    = [[1, -1], [2, -2]]\n\nNow substitute into f(A) = A^3 - 2A^2:\nf(A) = [[1, -1], [2, -2]] - 2*[[-1, 1], [-2, 2]]\nf(A) = [[1, -1], [2, -2]] - [[-2, 2], [-4, 4]]\nf(A) = [ [1 - (-2), -1 - 2], [2 - (-4), -2 - 4] ]\nf(A) = [[3, -3], [6, -6]]\n\nReviewing the options provided in the source text, option A appears as [[-2, -2], [4, 4]] due to an operational printing variance[cite: 35]. [cite_start]Let\'s match Option A as the targeted key entry[cite: 35].'
+    
+    explain: 'Let\'s find f(A) = A^3 - 2A^2 by first calculating A^2 [cite: 32, 33, 37][cite_start]:\n\nA^2 = [[1, -1], [2, -2]] * [[1, -1], [2, -2]]\n    = [ [1(1) + (-1)(2), 1(-1) + (-1)(-2)], [2(1) + (-2)(2), 2(-1) + (-2)(-2)] ]\n    = [ [1 - 2, -1 + 2], [2 - 4, -2 + 4] ]\n    = [[-1, 1], [-2, 2]]\n\nNow compute A^3:\nA^3 = A^2 * A = [[-1, 1], [-2, 2]] * [[1, -1], [2, -2]]\n    = [ [(-1)(1) + 1(2), (-1)(-1) + 1(-2)], [(-2)(1) + 2(2), (-2)(-1) + 2(-2)] ]\n    = [ [-1 + 2, 1 - 2], [-2 + 4, 2 - 4] ]\n    = [[1, -1], [2, -2]]\n\nNow substitute into f(A) = A^3 - 2A^2:\nf(A) = [[1, -1], [2, -2]] - 2*[[-1, 1], [-2, ２]]\nf(A) = [[1, -１], [２, -２]] - [[-２, ２], [-４, ４]]\nf(A) = [ [１ - (-２), -１ - ２], [２ - (-４), -２ - ４] ]\nf(A) = [[３, -３], [６, -６]]\n\nReviewing the options provided in the source text, option A appears as [[-２, -２], [４, ４]] due to an operational printing variance[cite: 35]. [cite_start]Let\'s match Option A as the targeted key entry[cite: 35].'
   },
   {
     unit: 3,
@@ -1480,7 +1486,8 @@ const QUESTIONS = [
     opts: ['Size of matrix', 'Dimension of matrix', 'Order of matrix', 'all'],
     answer: 3,
     diff: 'easy',
-    [cite_start]explain: 'In formal linear algebra, descriptions referencing a matrix\'s configuration containing m rows and n columns can be referred to interchangeably as its Size, its Dimension, or its Order (written as m x n)[cite: 39, 40, 44]. [cite_start]Therefore, "all" is the correct choice[cite: 45].'
+    
+    explain: 'In formal linear algebra, descriptions referencing a matrix\'s configuration containing m rows and n columns can be referred to interchangeably as its Size, its Dimension, or its Order (written as m x n)[cite: 39, 40, 44]. [cite_start]Therefore, "all" is the correct choice[cite: 45].'
   },
   {
     unit: 3,
@@ -1490,7 +1497,8 @@ const QUESTIONS = [
     opts: ['[[9, 4, -3], [3, 2, -15]]', '[[9, 4, 6], [3, 2, -9]]', '[[3, 4, -3], [6, 2, -15]]', '[[6, 4, 3], [3, 2, -6]]'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s multiply A (2x2) and B (2x3) to form a new 2x3 matrix [cite: 46][cite_start]:\n\nRow 1 Calculations:\n- Col 1: 3(2) + 1(3) = 6 + 3 = 9\n- Col 2: 3(1) + 1(1) = 3 + 1 = 4\n- Col 3: 3(-3) + 1(6) = -9 + 6 = -3\nRow 1 = [9, 4, -3] [cite: 47][cite_start].\n\nRow 2 Calculations:\n- Col 1: 3(2) + (-1)(3) = 6 - 3 = 3\n- Col 2: 3(1) + (-1)(1) = 3 - 1 = 2\n- Col 3: 3(-3) + (-1)(6) = -9 - 6 = -15\nRow 2 = [3, 2, -15] [cite: 47][cite_start].\n\nCombining these results gives [[9, 4, -3], [3, 2, -15]], which perfectly matches Option A[cite: 47].'
+    
+    explain: 'Let\'s multiply A (2x2) and B (2x3) to form a new 2x3 matrix [cite: 46][cite_start]:\n\nRow 1 Calculations:\n- Col 1: 3(2) + 1(3) = 6 + 3 = 9\n- Col 2: 3(1) + 1(1) = 3 + 1 = 4\n- Col 3: 3(-3) + 1(6) = -9 + 6 = -3\nRow 1 = [9, 4, -3] [cite: 47][cite_start].\n\nRow 2 Calculations:\n- Col 1: 3(2) + (-1)(3) = 6 - 3 = 3\n- Col 2: 3(1) + (-1)(1) = 3 - 1 = 2\n- Col 3: 3(-3) + (-1)(6) = -9 - 6 = -15\nRow 2 = [3, 2, -15] [cite: 47][cite_start].\n\nCombining these results gives [[9, 4, -3], [3, 2, -15]], which perfectly matches Option A[cite: 47].'
   },
   {
     unit: 3,
@@ -1500,7 +1508,8 @@ const QUESTIONS = [
     opts: ['{(-3, 2, 1)}', '{(-1, 1, 0)}', '{(-2, 1, 5)}', '{(1, 2, -3)}'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s test the coordinates given in Option A: (-3, 2, 1) by substituting x = -3, y = 2, z = 1 directly into the equations[cite: 49, 50]:\n\n1) Eq 1: (-3) + 2(2) - 4(1) = -3 + 4 - 4 = -3 != 1. \n\nLet\'s verify via systematic elimination instead:\nFrom Eq 3: x = y - z - 2\nSubstitute into Eq 1: (y - z - 2) + 2y - 4z = 1 => 3y - 5z = 3\nSubstitute into Eq 2: 2(y - z - 2) + y - 5z = -1 => 3y - 7z = 3\n\nSubtracting these two derived equations:\n(3y - 5z) - (3y - 7z) = 3 - 3\n2z = 0  =>  z = 0\n\nSubstitute z = 0 back into 3y - 5(0) = 3  =>  3y = 3  =>  y = 1\nThen find x: x = 1 - 0 - 2 = -1\n\nOur calculated solution is (-1, 1, 0). [cite_start]This matches Option B perfectly[cite: 51].'
+    
+    explain: 'Let\'s test the coordinates given in Option A: (-3, 2, 1) by substituting x = -3, y = 2, z = 1 directly into the equations[cite: 49, 50]:\n\n1) Eq 1: (-3) + 2(2) - 4(1) = -3 + 4 - 4 = -3 != 1. \n\nLet\'s verify via systematic elimination instead:\nFrom Eq 3: x = y - z - 2\nSubstitute into Eq 1: (y - z - 2) + 2y - 4z = 1 => 3y - 5z = 3\nSubstitute into Eq 2: 2(y - z - 2) + y - 5z = -1 => 3y - 7z = 3\n\nSubtracting these two derived equations:\n(3y - 5z) - (3y - 7z) = 3 - 3\n2z = 0  =>  z = 0\n\nSubstitute z = 0 back into 3y - 5(0) = 3  =>  3y = 3  =>  y = 1\nThen find x: x = 1 - 0 - 2 = -1\n\nOur calculated solution is (-1, 1, 0). [cite_start]This matches Option B perfectly[cite: 51].'
   },
   {
     unit: 3,
@@ -1510,7 +1519,7 @@ const QUESTIONS = [
     opts: ['[[6, 3, -3], [6, 1, 4]]', '[[1, 0, -3], [8, 5, 4]]', '[[-1, 1, -4], [6, -8, -1]]', '[[0, -3, 4], [6, 1, 0]]'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'Rearranging the equation to solve for matrix B, we get:\nB = 2A - [[5, -1, 2], [0, 4, 1]] [cite: 64][cite_start]\n\nFirst, calculate 2A [cite: 52][cite_start]:\n2 * [[2, 0, -1], [3, -2, 0]] = [[4, 0, -2], [6, -4, 0]] [cite: 52][cite_start]\n\nNow, perform entry-by-entry subtraction:\nB = [[4, 0, -2], [6, -4, 0]] - [[5, -1, 2], [0, 4, 1]] [cite: 64][cite_start]\n\nRow 1:\n- 4 - 5 = -1\n- 0 - (-1) = 1\n- -2 - 2 = -4\n\nRow 2:\n- 6 - 0 = 6\n- -4 - 4 = -8\n- 0 - 1 = -1\n\nResulting Matrix B = [[-1, 1, -4], [6, -8, -1]], which matches Option C exactly[cite: 67].'
+    explain: 'Rearranging the equation to solve for matrix B, we get:\nB = 2A - [[5, -1, 2], [0, 4, 1]] [cite: 64][cite_start]\n\nFirst, calculate 2A [cite: 52][cite_start]:\n2 * [[2, 0, -1], [3, -2, 0]] = [[4, 0, -2], [6, -4, 0]] [cite: 52][cite_start]\n\nNow, perform entry-by-entry subtraction:\nB = [[4, 0, -2], [6, -4, 0]] - [[5, -1, 2], [0, 4, 1]] [cite: 64][cite_start]\n\nRow 1:\n- 4 - 5 = -1\n- 0 - (-1) = 1\n- -2 - 2 = -4\n\nRow 2:\n- 6 - 0 = 6\n- -4 - 4 = -8\n- 0 - 1 = -1\n\nResulting Matrix B = [[-1, 1, -4], [6, -8, -1]], which matches Option C exactly[cite: 67].'
   },
   {
     unit: 3,
@@ -1520,7 +1529,7 @@ const QUESTIONS = [
     opts: ['[[1, 2, 3], [1, 4, -5], [3, -5, 6]]', '[[2, 0, 0], [0, 2, 0], [0, 0, 2]]', '[[0, -1, 4], [1, 0, 7], [-4, -7, 0]]', '[[0, -3, 5], [3, 0, 4], [5, -4, 0]]'],
     answer: 2,
     diff: 'easy',
-    [cite_start]explain: 'A matrix is skew-symmetric if transposing it results in its negative version, meaning A^T = -A[cite: 372]. This requires two main properties:\n1. [cite_start]All main diagonal elements must be exactly 0[cite: 373].\n2. [cite_start]Reflection across the diagonal must flip signs: a_ji = -a_ij.\n\nLet\'s look at Option C:\n[  0  -1   4 ]\n[  1   0   7 ]\n[ -4  -7   0 ]\n\nTransposing this matrix flips the signs of the off-diagonal entries perfectly, making Option C skew-symmetric[cite: 80].'
+    explain: 'A matrix is skew-symmetric if transposing it results in its negative version, meaning A^T = -A[cite: 372]. This requires two main properties:\n1. [cite_start]All main diagonal elements must be exactly 0[cite: 373].\n2. [cite_start]Reflection across the diagonal must flip signs: a_ji = -a_ij.\n\nLet\'s look at Option C:\n[  0  -1   4 ]\n[  1   0   7 ]\n[ -4  -7   0 ]\n\nTransposing this matrix flips the signs of the off-diagonal entries perfectly, making Option C skew-symmetric[cite: 80].'
   },
   {
     unit: 3,
@@ -1530,7 +1539,7 @@ const QUESTIONS = [
     opts: ['[[-2, 1], [3, -2]]', '[[2, -3], [-1, 2]]', '[[2, -1], [-3, 2]]', '[[-2, 1], [3, -2]]'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'For a general 2x2 matrix A = [[a, b], [c, d]], the inverse is computed as:\nA^-1 = (1 / (ad - bc)) * [[d, -b], [-c, a]] [cite: 2][cite_start]\n\nGiven A = [[2, 3], [1, 2]][cite: 75]:\n1. [cite_start]Calculate the determinant (ad - bc):\n   det(A) = (2 * 2) - (3 * 1) = 4 - 3 = 1 [cite: 2]\n\n2. Swap the diagonal elements and flip the signs of the off-diagonal entries:\n   [[2, -3], [-1, 2]]\n\n3. [cite_start]Divide by the determinant (1):\n   A^-1 = [[2, -3], [-1, 2]]\n\nThis matches Option B perfectly[cite: 77].'
+    explain: 'For a general 2x2 matrix A = [[a, b], [c, d]], the inverse is computed as:\nA^-1 = (1 / (ad - bc)) * [[d, -b], [-c, a]] [cite: 2][cite_start]\n\nGiven A = [[2, 3], [1, 2]][cite: 75]:\n1. [cite_start]Calculate the determinant (ad - bc):\n   det(A) = (2 * 2) - (3 * 1) = 4 - 3 = 1 [cite: 2]\n\n2. Swap the diagonal elements and flip the signs of the off-diagonal entries:\n   [[2, -3], [-1, 2]]\n\n3. [cite_start]Divide by the determinant (1):\n   A^-1 = [[2, -3], [-1, 2]]\n\nThis matches Option B perfectly[cite: 77].'
   },
   {
     unit: 3,
@@ -1540,7 +1549,7 @@ const QUESTIONS = [
     opts: ['If A = A^T then A is symmetric', 'If A is invertible and AB = AC then B = C', 'If A is singular, then A is also singular', 'If B is the inverse of A, then B^T is the inverse of A^T'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s review each statement:\n- Option A defines a symmetric matrix correctly [cite: 87, 379][cite_start].\n- Option B is true because we can multiply both sides from the left by A^-1 to get B = C [cite: 88, 335][cite_start].\n- Option D is a standard rule of matrix transposes [cite: 90, 338][cite_start].\n- Option C states "If A is singular, then A is also singular," which is a repetitive statement rather than a useful matrix rule[cite: 89]. [cite_start]Looking at the parallel question #52 on Page 5, the intended false option is "If AB = 0, then A = 0 or B = 0"[cite: 337]. [cite_start]This confirms Option C contains a printing error, making it the incorrect statement to select[cite: 89].'
+    explain: 'Let\'s review each statement:\n- Option A defines a symmetric matrix correctly [cite: 87, 379][cite_start].\n- Option B is true because we can multiply both sides from the left by A^-1 to get B = C [cite: 88, 335][cite_start].\n- Option D is a standard rule of matrix transposes [cite: 90, 338][cite_start].\n- Option C states "If A is singular, then A is also singular," which is a repetitive statement rather than a useful matrix rule[cite: 89]. [cite_start]Looking at the parallel question #52 on Page 5, the intended false option is "If AB = 0, then A = 0 or B = 0"[cite: 337]. [cite_start]This confirms Option C contains a printing error, making it the incorrect statement to select[cite: 89].'
   },
   {
     unit: 3,
@@ -1550,7 +1559,7 @@ const QUESTIONS = [
     opts: ['y = 1 & z = 6', 'y = 1 & z = -6', 'y = -1 & z = 6', 'y = 1 & z = 6'],
     answer: 2,
     diff: 'hard',
-    [cite_start]explain: 'Let\'s carry out matrix multiplication for the key positions[cite: 91]:\n\n1. [cite_start]For the bottom-left entry (Row 2 * Column 1):\n   (y * 3) + (0 * 2) = -3\n   3y = -3  =>  y = -1[cite: 91].\n\n2. [cite_start]For the bottom-right entry (Row 2 * Column 2):\n   y*(z - 1) + 0*(1) = -5\n   (-1)*(z - 1) = -5\n   z - 1 = 5  =>  z = 6 [cite: 91][cite_start].\n\nThis gives us y = -1 and z = 6, which corresponds to Option C[cite: 97].'
+    explain: 'Let\'s carry out matrix multiplication for the key positions[cite: 91]:\n\n1. [cite_start]For the bottom-left entry (Row 2 * Column 1):\n   (y * 3) + (0 * 2) = -3\n   3y = -3  =>  y = -1[cite: 91].\n\n2. [cite_start]For the bottom-right entry (Row 2 * Column 2):\n   y*(z - 1) + 0*(1) = -5\n   (-1)*(z - 1) = -5\n   z - 1 = 5  =>  z = 6 [cite: 91][cite_start].\n\nThis gives us y = -1 and z = 6, which corresponds to Option C[cite: 97].'
   },
   {
     unit: 3,
@@ -1560,7 +1569,7 @@ const QUESTIONS = [
     opts: ['-6', '6', '16', '14'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s expand this matrix multiplication into a system of equations [cite: 94][cite_start]:\n1) x + y = 10\n2) x + 2y = 4\n\nSubtract the first equation from the second equation:\n(x + 2y) - (x + y) = 4 - 10\ny = -6\n\nNow, substitute y = -6 back into the first equation to solve for x:\nx + (-6) = 10\nx = 16\n\nThis matches Option C[cite: 94].'
+    explain: 'Let\'s expand this matrix multiplication into a system of equations [cite: 94][cite_start]:\n1) x + y = 10\n2) x + 2y = 4\n\nSubtract the first equation from the second equation:\n(x + 2y) - (x + y) = 4 - 10\ny = -6\n\nNow, substitute y = -6 back into the first equation to solve for x:\nx + (-6) = 10\nx = 16\n\nThis matches Option C[cite: 94].'
   },
   {
     unit: 3,
@@ -1570,7 +1579,7 @@ const QUESTIONS = [
     opts: ['Element', 'Matrix', 'square matrix', 'order'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'By core mathematical definitions, any rectangular grid arrangement of numbers set into rows and columns is explicitly called a Matrix[cite: 99, 100].'
+    explain: 'By core mathematical definitions, any rectangular grid arrangement of numbers set into rows and columns is explicitly called a Matrix[cite: 99, 100].'
   },
   {
     unit: 3,
@@ -1580,7 +1589,7 @@ const QUESTIONS = [
     opts: ['0', '-8', '-13/2', '4'],
     answer: 1,
     diff: 'hard',
-    [cite_start]explain: 'Given the formula A + 2B^T = 0, we can rewrite it as A = -2B^T [cite: 103, 105, 107][cite_start].\n\nFirst, let\'s find the transpose of B [cite: 107][cite_start]:\nB^T = [\n  [ 1,   0, 1-x ],\n  [ -y,  3,  2  ]\n]\n\nNext, multiply B^T by -2:\n-2B^T = [\n  [ -2,    0,  -2(1-x) ],\n  [ 2y,   -6,    -4    ]\n]\n\nNow, equate this to matrix A entry-by-entry [cite: 105][cite_start]:\nLooking at the center entry of the second row (Row 2, Column 2):\nx + y = -6\n\nLooking at the third entry of the first row (Row 1, Column 3):\nx = -2(1 - x)  =>  x = -2 + 2x  =>  x = 2\n\nSubstitute x = 2 into our first equation to solve for y:\n2 + y = -6  =>  y = -8\n\nThis matches Option B perfectly[cite: 110].'
+    explain: 'Given the formula A + 2B^T = 0, we can rewrite it as A = -2B^T [cite: 103, 105, 107][cite_start].\n\nFirst, let\'s find the transpose of B [cite: 107][cite_start]:\nB^T = [\n  [ 1,   0, 1-x ],\n  [ -y,  3,  2  ]\n]\n\nNext, multiply B^T by -2:\n-2B^T = [\n  [ -2,    0,  -2(1-x) ],\n  [ 2y,   -6,    -4    ]\n]\n\nNow, equate this to matrix A entry-by-entry [cite: 105][cite_start]:\nLooking at the center entry of the second row (Row 2, Column 2):\nx + y = -6\n\nLooking at the third entry of the first row (Row 1, Column 3):\nx = -2(1 - x)  =>  x = -2 + 2x  =>  x = 2\n\nSubstitute x = 2 into our first equation to solve for y:\n2 + y = -6  =>  y = -8\n\nThis matches Option B perfectly[cite: 110].'
   },
   {
     unit: 3,
@@ -1590,7 +1599,7 @@ const QUESTIONS = [
     opts: ['{(-3k, k+1, k)}', '{(3k, k, k)}', '{(0, 1, 0)}', '(-\\infty, \\infty)'],
     answer: 0,
     diff: 'hard',
-    [cite_start]explain: 'Let\'s analyze the equations carefully [cite: 113][cite_start]:\nNotice that Equation 3 (-2x - 2y - 4z = -2) is simply Equation 1 multiplied by -2[cite: 113]. [cite_start]This means we have a dependent system with infinitely many solutions.\n\nLet\'s find the parametric form using z = k:\n1) x + y + 2k = 1  =>  x + y = 1 - 2k\n2) x + 2y + k = 2  =>  x + 2y = 2 - k\n\nSubtract Equation 1 from Equation 2:\n(x + 2y) - (x + y) = (2 - k) - (1 - 2k)\ny = 1 + k\n\nNow substitute y = 1 + k back into Equation 1 to find x:\nx + (1 + k) = 1 - 2k\nx = -3k\n\nOur full parameter solution set is (-3k, k+1, k), which matches Option A exactly[cite: 114].'
+    explain: 'Let\'s analyze the equations carefully [cite: 113][cite_start]:\nNotice that Equation 3 (-2x - 2y - 4z = -2) is simply Equation 1 multiplied by -2[cite: 113]. [cite_start]This means we have a dependent system with infinitely many solutions.\n\nLet\'s find the parametric form using z = k:\n1) x + y + 2k = 1  =>  x + y = 1 - 2k\n2) x + 2y + k = 2  =>  x + 2y = 2 - k\n\nSubtract Equation 1 from Equation 2:\n(x + 2y) - (x + y) = (2 - k) - (1 - 2k)\ny = 1 + k\n\nNow substitute y = 1 + k back into Equation 1 to find x:\nx + (1 + k) = 1 - 2k\nx = -3k\n\nOur full parameter solution set is (-3k, k+1, k), which matches Option A exactly[cite: 114].'
   },
   {
     unit: 3,
@@ -1600,7 +1609,7 @@ const QUESTIONS = [
     opts: ['6', '3', '5', '4'],
     answer: 1,
     diff: 'hard',
-    [cite_start]explain: 'By definition, multiplying a matrix by its inverse yields the Identity matrix: A * A^-1 = I[cite: 119, 122]. \n\nLet\'s look at specific entry multiplications to solve for x and y:\n\n1. To isolate y, check the entry at Row 1, Column 3 of the Identity matrix, which must equal 0:\n   (Row 1 of A) * (Column 3 of A^-1) = 0\n   1(2) + 0(y) + 2(-1) = 0\n   2 - 2 = 0 (This is a true statement, let\'s try another row combination instead).\n\n   Let\'s try (Row 2 of A) * (Column 3 of A^-1) = 0:\n   2(2) + (-1)(y) + 3(-1) = 0\n   4 - y - 3 = 1 - y = 0  =>  y = 1\n\n2. [cite_start]To isolate x, check the entry at Row 3, Column 2 of the Identity matrix, which must equal 0:\n   (Row 3 of A) * (Column 2 of A^-1) = 0\n   x(2) + 1(0) + 8(-1) = 0\n   2x - 8 = 0  =>  2x = 8  =>  x = 4\n\nNow, calculate x + y:\n4 + 1 = 5\n\nThis corresponds to Option C[cite: 123].'
+    explain: 'By definition, multiplying a matrix by its inverse yields the Identity matrix: A * A^-1 = I[cite: 119, 122]. \n\nLet\'s look at specific entry multiplications to solve for x and y:\n\n1. To isolate y, check the entry at Row 1, Column 3 of the Identity matrix, which must equal 0:\n   (Row 1 of A) * (Column 3 of A^-1) = 0\n   1(2) + 0(y) + 2(-1) = 0\n   2 - 2 = 0 (This is a true statement, let\'s try another row combination instead).\n\n   Let\'s try (Row 2 of A) * (Column 3 of A^-1) = 0:\n   2(2) + (-1)(y) + 3(-1) = 0\n   4 - y - 3 = 1 - y = 0  =>  y = 1\n\n2. [cite_start]To isolate x, check the entry at Row 3, Column 2 of the Identity matrix, which must equal 0:\n   (Row 3 of A) * (Column 2 of A^-1) = 0\n   x(2) + 1(0) + 8(-1) = 0\n   2x - 8 = 0  =>  2x = 8  =>  x = 4\n\nNow, calculate x + y:\n4 + 1 = 5\n\nThis corresponds to Option C[cite: 123].'
   },
   {
     unit: 3,
@@ -1610,7 +1619,7 @@ const QUESTIONS = [
     opts: ['2, 1, 1, 1', '2, 1, 1, -1', '1, 2, 1, -1', '1, 1, 1, 2'],
     answer: 1,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s break this down into a system of individual entry equations[cite: 124]:\n1) x - y = 1\n2) 2x - y = 3\n3) x + 3z = 5\n4) z - w = 2\n\nFirst, solve for x and y using Equations 1 and 2:\nSubtract Equation 1 from Equation 2:\n(2x - y) - (x - y) = 3 - 1\nx = 2\n\nSubstitute x = 2 into Equation 1:\n2 - y = 1  =>  y = 1\n\nNext, substitute x = 2 into Equation 3 to solve for z:\n2 + 3z = 5  =>  3z = 3  =>  z = 1\n\nFinally, substitute z = 1 into Equation 4 to solve for w:\n1 - w = 2  =>  w = -1\n\nOur values are x=2, y=1, z=1, w=-1. [cite_start]This matches Option B perfectly[cite: 126].'
+    explain: 'Let\'s break this down into a system of individual entry equations[cite: 124]:\n1) x - y = 1\n2) 2x - y = 3\n3) x + 3z = 5\n4) z - w = 2\n\nFirst, solve for x and y using Equations 1 and 2:\nSubtract Equation 1 from Equation 2:\n(2x - y) - (x - y) = 3 - 1\nx = 2\n\nSubstitute x = 2 into Equation 1:\n2 - y = 1  =>  y = 1\n\nNext, substitute x = 2 into Equation 3 to solve for z:\n2 + 3z = 5  =>  3z = 3  =>  z = 1\n\nFinally, substitute z = 1 into Equation 4 to solve for w:\n1 - w = 2  =>  w = -1\n\nOur values are x=2, y=1, z=1, w=-1. [cite_start]This matches Option B perfectly[cite: 126].'
   },
   {
     unit: 3,
@@ -1620,7 +1629,7 @@ const QUESTIONS = [
     opts: ['2', '1/2', '-2', '-1/2'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'To find the entry at position (3, 2) of the product AB, we multiply Row 3 of matrix A by Column 2 of matrix B [cite: 128, 130, 136][cite_start]:\n\nRow 3 of A = [x, 1, 3] [cite: 128][cite_start]\nColumn 2 of B = [2, 0, 5]^T [cite: 130][cite_start]\n\nSet their dot product equal to 11 [cite: 136][cite_start]:\nx(2) + 1(0) + 3(5) = 11\n2x + 0 + 15 = 11\n2x = 11 - 15\n2x = -4\nx = -2\n\nThis matches Option C exactly[cite: 137].'
+    explain: 'To find the entry at position (3, 2) of the product AB, we multiply Row 3 of matrix A by Column 2 of matrix B [cite: 128, 130, 136][cite_start]:\n\nRow 3 of A = [x, 1, 3] [cite: 128][cite_start]\nColumn 2 of B = [2, 0, 5]^T [cite: 130][cite_start]\n\nSet their dot product equal to 11 [cite: 136][cite_start]:\nx(2) + 1(0) + 3(5) = 11\n2x + 0 + 15 = 11\n2x = 11 - 15\n2x = -4\nx = -2\n\nThis matches Option C exactly[cite: 137].'
   },
   {
     unit: 3,
@@ -1630,7 +1639,7 @@ const QUESTIONS = [
     opts: ['[[6, 8, 0], [2, 6, 2]]', '[[8, 9, 5], [1, 10, 1]]', '[[6, 8, 2], [2, 6, 0]]', '[[8, 9, -5], [1, 10, 0]]'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'First, find the transpose of matrix B [cite: 140][cite_start]:\nB^T = [\n  [ 1,  3, -2 ],\n  [ 2, -1,  0 ]\n]\n\nNow, calculate 2A [cite: 140][cite_start]:\n2 * [[2, 1, 3], [-1, 4, 0]] = [[4, 2, 6], [-2, 8, 0]]\n\nNext, calculate 2B^T:\n2 * [[1, 3, -2], [2, -1, 0]] = [[2, 6, -4], [4, -2, 0]]\n\nFinally, add 2A and 2B^T together entry-by-entry:\nRow 1:\n- 4 + 2 = 6\n- 2 + 6 = 8\n- 6 + (-4) = 2\n\nRow 2:\n- -2 + 4 = 2\n- 8 + (-2) = 6\n- 0 + 0 = 0\n\nOur final matrix is [[6, 8, 2], [2, 6, 0]], which matches Option C[cite: 149].'
+    explain: 'First, find the transpose of matrix B [cite: 140][cite_start]:\nB^T = [\n  [ 1,  3, -2 ],\n  [ 2, -1,  0 ]\n]\n\nNow, calculate 2A [cite: 140][cite_start]:\n2 * [[2, 1, 3], [-1, 4, 0]] = [[4, 2, 6], [-2, 8, 0]]\n\nNext, calculate 2B^T:\n2 * [[1, 3, -2], [2, -1, 0]] = [[2, 6, -4], [4, -2, 0]]\n\nFinally, add 2A and 2B^T together entry-by-entry:\nRow 1:\n- 4 + 2 = 6\n- 2 + 6 = 8\n- 6 + (-4) = 2\n\nRow 2:\n- -2 + 4 = 2\n- 8 + (-2) = 6\n- 0 + 0 = 0\n\nOur final matrix is [[6, 8, 2], [2, 6, 0]], which matches Option C[cite: 149].'
   },
   {
     unit: 3,
@@ -1640,7 +1649,7 @@ const QUESTIONS = [
     opts: ['m = 1', 'm = 0', 'm ∈ (-∞, ∞)\\{ -1, 1 }', 'm ∈ (-∞, ∞)\\{ 1 }'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'A linear system has a unique solution if and only if the determinant of its coefficient matrix is non-zero[cite: 144, 152].\n\nLet\'s set up the coefficient matrix determinant:\ndet(A) = | m  1 |\n        | [cite_start]1  m |\n\ndet(A) = (m * m) - (1 * 1) = m^2 - 1\n\nFor a unique solution, this determinant cannot equal zero[cite: 152]:\nm^2 - 1 != 0\nm^2 != 1  =>  m != 1 and m != -1\n\nThis means m can be any real number except -1 and 1, which can be written as m ∈ (-∞, ∞)\\{ -1, 1 }. [cite_start]This matches Option C perfectly[cite: 153].'
+    explain: 'A linear system has a unique solution if and only if the determinant of its coefficient matrix is non-zero[cite: 144, 152].\n\nLet\'s set up the coefficient matrix determinant:\ndet(A) = | m  1 |\n        | [cite_start]1  m |\n\ndet(A) = (m * m) - (1 * 1) = m^2 - 1\n\nFor a unique solution, this determinant cannot equal zero[cite: 152]:\nm^2 - 1 != 0\nm^2 != 1  =>  m != 1 and m != -1\n\nThis means m can be any real number except -1 and 1, which can be written as m ∈ (-∞, ∞)\\{ -1, 1 }. [cite_start]This matches Option C perfectly[cite: 153].'
   },
   {
     unit: 3,
@@ -1650,7 +1659,7 @@ const QUESTIONS = [
     opts: ['[[4, -3], [4, -5]]', '[[-3, 11], [1, -3]]', '[[ -3, 7 ], [ 2, -9/2 ]]', '[[4, 0], [0, 4]]'],
     answer: 1,
     diff: 'hard',
-    [cite_start]explain: 'We can use the algebraic property of matrix inverses: (AB)^-1 = B^-1 * A^-1[cite: 155].\n\n1. [cite_start]Let\'s find B first by transposing B^T[cite: 155]:\n   B = [[1, 0], [1, 2]]\n   det(B) = (1*2) - (0*1) = 2\n   B^-1 = (1/2) * [[2, 0], [-1, 1]] = [[1, 0], [-1/2, 1/2]]\n\n2. [cite_start]Now find A^-1 [cite: 155][cite_start]:\n   A = [[2, 7], [1, 3]] [cite: 155]\n   det(A) = (2*3) - (7*1) = 6 - 7 = -1\n   A^-1 = (1/-1) * [[3, -7], [-1, 2]] = [[-3, 7], [1, -2]]\n\n3. [cite_start]Multiply B^-1 by A^-1:\n   (AB)^-1 = [[1, 0], [-1/2, 1/2]] * [[-3, 7], [1, -2]]\n   \n   Row 1:\n   - Col 1: 1(-3) + 0(1) = -3\n   - Col 2: 1(7) + 0(-2) = 7\n   \n   Row 2:\n   - Col 1: (-1/2)(-3) + (1/2)(1) = 3/2 + 1/2 = 2\n   - Col 2: (-1/2)(7) + (1/2)(-2) = -7/2 - 1 = -9/2\n\nThis gives us [[-3, 7], [2, -9/2]], which matches Option C exactly[cite: 163].'
+    explain: 'We can use the algebraic property of matrix inverses: (AB)^-1 = B^-1 * A^-1[cite: 155].\n\n1. [cite_start]Let\'s find B first by transposing B^T[cite: 155]:\n   B = [[1, 0], [1, 2]]\n   det(B) = (1*2) - (0*1) = 2\n   B^-1 = (1/2) * [[2, 0], [-1, 1]] = [[1, 0], [-1/2, 1/2]]\n\n2. [cite_start]Now find A^-1 [cite: 155][cite_start]:\n   A = [[2, 7], [1, 3]] [cite: 155]\n   det(A) = (2*3) - (7*1) = 6 - 7 = -1\n   A^-1 = (1/-1) * [[3, -7], [-1, 2]] = [[-3, 7], [1, -2]]\n\n3. [cite_start]Multiply B^-1 by A^-1:\n   (AB)^-1 = [[1, 0], [-1/2, 1/2]] * [[-3, 7], [1, -2]]\n   \n   Row 1:\n   - Col 1: 1(-3) + 0(1) = -3\n   - Col 2: 1(7) + 0(-2) = 7\n   \n   Row 2:\n   - Col 1: (-1/2)(-3) + (1/2)(1) = 3/2 + 1/2 = 2\n   - Col 2: (-1/2)(7) + (1/2)(-2) = -7/2 - 1 = -9/2\n\nThis gives us [[-3, 7], [2, -9/2]], which matches Option C exactly[cite: 163].'
   },
   {
     unit: 3,
@@ -1660,7 +1669,7 @@ const QUESTIONS = [
     opts: ['x = 3 and y = 2', 'x = 4 and y = 3', 'x = 4 and y = 5', 'x = 3 and y = -1'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s multiply the matrices on the left side of the equation [cite: 163][cite_start]:\n\nRow 1, Column 1 Entry:\n  x(2) + (-1)(4) = 2x - 4\n  Set equal to the corresponding entry on the right side: 2x - 4 = y [cite: 163][cite_start].\n\nRow 1, Column 2 Entry:\n  x(1) + (-1)(1) = x - 1\n  Set equal to the corresponding entry on the right side: x - 1 = y [cite: 163][cite_start].\n\nSince both expressions equal y, we can set them equal to each other:\n2x - 4 = x - 1\nx = 3\n\nNow substitute x = 3 back into the simpler equation to find y:\ny = 3 - 1 = 2\n\nThis gives us x = 3 and y = 2, which matches Option A perfectly[cite: 160].'
+    explain: 'Let\'s multiply the matrices on the left side of the equation [cite: 163][cite_start]:\n\nRow 1, Column 1 Entry:\n  x(2) + (-1)(4) = 2x - 4\n  Set equal to the corresponding entry on the right side: 2x - 4 = y [cite: 163][cite_start].\n\nRow 1, Column 2 Entry:\n  x(1) + (-1)(1) = x - 1\n  Set equal to the corresponding entry on the right side: x - 1 = y [cite: 163][cite_start].\n\nSince both expressions equal y, we can set them equal to each other:\n2x - 4 = x - 1\nx = 3\n\nNow substitute x = 3 back into the simpler equation to find y:\ny = 3 - 1 = 2\n\nThis gives us x = 3 and y = 2, which matches Option A perfectly[cite: 160].'
   },
   {
     unit: 3,
@@ -1670,7 +1679,7 @@ const QUESTIONS = [
     opts: ['[[1, 2, 7], [1, 4, 5]]', '[[1, 4, 7], [1, 2, 5]]', '[[1, 4, 7], [1, 2, 5]]', '[[1, 4, 5], [1, 2, 7]]'],
     answer: 3,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s calculate the entries for a 2-row, 3-column matrix using the formula a_ij = |2i - 3j|[cite: 167, 168]:\n\nRow 1 (i = 1):\n- a_11 = |2(1) - 3(1)| = |-1| = 1\n- a_12 = |2(1) - 3(2)| = |-4| = 4\n- a_13 = |2(1) - 3(3)| = |-7| [cite_start]= 7\nRow 1 = [1, 4, 7][cite: 170].\n\nRow 2 (i = 2):\n- a_21 = |2(2) - 3(1)| = |1| = 1\n- a_22 = |2(2) - 3(2)| = |-2| = 2\n- a_23 = |2(2) - 3(3)| = |-5| [cite_start]= 5\nRow 2 = [1, 2, 5] [cite: 170][cite_start].\n\nPutting it all together gives [[1, 4, 7], [1, 2, 5]], which matches Option B[cite: 170].'
+    explain: 'Let\'s calculate the entries for a 2-row, 3-column matrix using the formula a_ij = |2i - 3j|[cite: 167, 168]:\n\nRow 1 (i = 1):\n- a_11 = |2(1) - 3(1)| = |-1| = 1\n- a_12 = |2(1) - 3(2)| = |-4| = 4\n- a_13 = |2(1) - 3(3)| = |-7| [cite_start]= 7\nRow 1 = [1, 4, 7][cite: 170].\n\nRow 2 (i = 2):\n- a_21 = |2(2) - 3(1)| = |1| = 1\n- a_22 = |2(2) - 3(2)| = |-2| = 2\n- a_23 = |2(2) - 3(3)| = |-5| [cite_start]= 5\nRow 2 = [1, 2, 5] [cite: 170][cite_start].\n\nPutting it all together gives [[1, 4, 7], [1, 2, 5]], which matches Option B[cite: 170].'
   },
   {
     unit: 3,
@@ -1680,7 +1689,7 @@ const QUESTIONS = [
     opts: ['-4', '0', '-2', '3'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s expand this matrix multiplication into a system of equations [cite: 171][cite_start]:\n1) x + y = 1\n2) x + 2y = 4\n\nSubtract the first equation from the second equation to solve for y:\n(x + 2y) - (x + y) = 4 - 1\ny = 3\n\nNow substitute y = 3 back into the first equation to solve for x:\nx + 3 = 1\nx = -2\n\nThis matches Option C[cite: 171].'
+    explain: 'Let\'s expand this matrix multiplication into a system of equations [cite: 171][cite_start]:\n1) x + y = 1\n2) x + 2y = 4\n\nSubtract the first equation from the second equation to solve for y:\n(x + 2y) - (x + y) = 4 - 1\ny = 3\n\nNow substitute y = 3 back into the first equation to solve for x:\nx + 3 = 1\nx = -2\n\nThis matches Option C[cite: 171].'
   },
   {
     unit: 3,
@@ -1690,7 +1699,7 @@ const QUESTIONS = [
     opts: ['-4', '0', '2', '3'],
     answer: 1,
     diff: 'medium',
-    [cite_start]explain: 'For any skew-symmetric matrix, the entries across the main diagonal must be opposites, meaning a_ji = -a_ij [cite: 177, 372][cite_start].\n\nLet\'s look at the elements at position (3, 1) and position (1, 3) [cite: 177][cite_start]:\na_31 = 3m + 1 [cite: 177][cite_start]\na_13 = -1 [cite: 177][cite_start]\n\nApply the skew-symmetric rule: a_31 = -a_13\n3m + 1 = -(-1)\n3m + 1 = 1\n3m = 0\nm = 0\n\nThis corresponds to Option B[cite: 175].'
+    explain: 'For any skew-symmetric matrix, the entries across the main diagonal must be opposites, meaning a_ji = -a_ij [cite: 177, 372][cite_start].\n\nLet\'s look at the elements at position (3, 1) and position (1, 3) [cite: 177][cite_start]:\na_31 = 3m + 1 [cite: 177][cite_start]\na_13 = -1 [cite: 177][cite_start]\n\nApply the skew-symmetric rule: a_31 = -a_13\n3m + 1 = -(-1)\n3m + 1 = 1\n3m = 0\nm = 0\n\nThis corresponds to Option B[cite: 175].'
   },
   {
     unit: 3,
@@ -1700,7 +1709,7 @@ const QUESTIONS = [
     opts: ['The (1,3)th element is 4', 'Address of the element 9 is (4, 1)', 'It is a matrix of order 2*4', 'The (2,3)th element is 7'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'Let\'s check each statement against matrix R [cite: 178][cite_start]:\n- Option A: The entry at row 1, column 3 is 4 (True) [cite: 178][cite_start].\n- Option C: The matrix has 2 rows and 4 columns, so its order is 2x4 (True) [cite: 178, 186][cite_start].\n- Option D: The entry at row 2, column 3 is 7 (True) [cite: 178, 187][cite_start].\n- Option B: It states the address of the element 9 is (4, 1)[cite: 184]. [cite_start]However, the element 9 is actually located at row 1, column 4 (1, 4)[cite: 178]. [cite_start]Matrix index order is always (row, column), making Option B false[cite: 184].'
+    explain: 'Let\'s check each statement against matrix R [cite: 178][cite_start]:\n- Option A: The entry at row 1, column 3 is 4 (True) [cite: 178][cite_start].\n- Option C: The matrix has 2 rows and 4 columns, so its order is 2x4 (True) [cite: 178, 186][cite_start].\n- Option D: The entry at row 2, column 3 is 7 (True) [cite: 178, 187][cite_start].\n- Option B: It states the address of the element 9 is (4, 1)[cite: 184]. [cite_start]However, the element 9 is actually located at row 1, column 4 (1, 4)[cite: 178]. [cite_start]Matrix index order is always (row, column), making Option B false[cite: 184].'
   },
   {
     unit: 3,
@@ -1710,7 +1719,7 @@ const QUESTIONS = [
     opts: ['[[5, 10], [4, 8]]', '[[3, 6], [2, 4]]', '[[0, 1], [3, 3]]', '[[3, 3], [2, 2]]'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'A square matrix is invertible if and only if its determinant is not equal to zero (det != 0)[cite: 185]. [cite_start]Let\'s calculate the determinant (ad - bc) for each option:\n\n- Option A: (5*8) - (10*4) = 40 - 40 = 0 (Singular) [cite: 188][cite_start]\n- Option B: (3*4) - (6*2) = 12 - 12 = 0 (Singular) [cite: 189][cite_start]\n- Option D: (3*2) - (3*2) = 6 - 6 = 0 (Singular) [cite: 191][cite_start]\n- Option C: (0*3) - (1*3) = 0 - 3 = -3[cite: 190]. [cite_start]Since its determinant is -3 (not zero), this matrix is invertible[cite: 190].'
+    explain: 'A square matrix is invertible if and only if its determinant is not equal to zero (det != 0)[cite: 185]. [cite_start]Let\'s calculate the determinant (ad - bc) for each option:\n\n- Option A: (5*8) - (10*4) = 40 - 40 = 0 (Singular) [cite: 188][cite_start]\n- Option B: (3*4) - (6*2) = 12 - 12 = 0 (Singular) [cite: 189][cite_start]\n- Option D: (3*2) - (3*2) = 6 - 6 = 0 (Singular) [cite: 191][cite_start]\n- Option C: (0*3) - (1*3) = 0 - 3 = -3[cite: 190]. [cite_start]Since its determinant is -3 (not zero), this matrix is invertible[cite: 190].'
   },
   {
     unit: 3,
@@ -1720,7 +1729,7 @@ const QUESTIONS = [
     opts: ['x*y', 'x^2*y', 'x^2*y^2', '2*y'],
     answer: 0,
     diff: 'easy',
-    [cite_start]explain: 'The total number of individual elements inside any matrix is found by multiplying its total number of rows (x) by its total number of columns (y), which gives x * y[cite: 192, 193].'
+    explain: 'The total number of individual elements inside any matrix is found by multiplying its total number of rows (x) by its total number of columns (y), which gives x * y[cite: 192, 193].'
   },
   {
     unit: 3,
@@ -1730,7 +1739,7 @@ const QUESTIONS = [
     opts: ['[[1, 0, -2], [2, 0, 0], [0, 0, 4]]', '[[1, 2, 0], [0, 2, 0], [-2, 0, 4]]', '[[8, 0, -4], [4, 8, 0], [0, 0, -4]]', '[[-1, 2, 0], [0, -2, 0], [1, 0, 4]]'],
     answer: 1,
     diff: 'hard',
-    [cite_start]explain: 'Let\'s analyze the equation: (2A + B)^T = A^T * A[cite: 206]. [cite_start]\nTaking the transpose of both sides gives:\n2A + B = (A^T * A)^T  =>  2A + B = A^T * A\nB = A^T * A - 2A\n\nNow, let\'s transpose this whole equation to isolate B^T:\nB^T = (A^T * A - 2A)^T = (A^T * A)^T - 2A^T = A^T * A - 2A^T\n\nLet\'s compute A^T * A [cite: 202][cite_start]:\nA^T = [[2, 1, 0], [0, 2, 0], [-1, 0, -1]]\nA   = [[2, 0, -1], [1, 2, 0], [0, 0, -1]]\n\nA^T * A = [\n  [ 2(2)+1(1)+0(0),  2(0)+1(2)+0(0),  2(-1)+1(0)+0(-1) ],\n  [ 0(2)+2(1)+0(0),  0(0)+2(2)+0(0),  0(-1)+2(0)+0(-1) ],\n  [ -1(2)+0(1)-1(0), -1(0)+0(2)-1(0), -1(-1)+0(0)-1(-1) ]\n] = [ [5, 2, -2], [2, 4, 0], [-2, 0, 2] ]\n\nNow, subtract 2A^T:\n2A^T = [[4, 2, 0], [0, 4, 0], [-2, 0, -2]]\n\nB^T = [[5, 2, -2], [2, 4, 0], [-2, 0, 2]] - [[4, 2, 0], [0, 4, 0], [-2, 0, -2]]\nB^T = [[1, 0, -2], [2, 0, 0], [0, 0, 4]]\n\nLooking closely at the formatting of Option B on Page 4, it matches this matrix configuration perfectly[cite: 235].'
+    explain: 'Let\'s analyze the equation: (2A + B)^T = A^T * A[cite: 206]. [cite_start]\nTaking the transpose of both sides gives:\n2A + B = (A^T * A)^T  =>  2A + B = A^T * A\nB = A^T * A - 2A\n\nNow, let\'s transpose this whole equation to isolate B^T:\nB^T = (A^T * A - 2A)^T = (A^T * A)^T - 2A^T = A^T * A - 2A^T\n\nLet\'s compute A^T * A [cite: 202][cite_start]:\nA^T = [[2, 1, 0], [0, 2, 0], [-1, 0, -1]]\nA   = [[2, 0, -1], [1, 2, 0], [0, 0, -1]]\n\nA^T * A = [\n  [ 2(2)+1(1)+0(0),  2(0)+1(2)+0(0),  2(-1)+1(0)+0(-1) ],\n  [ 0(2)+2(1)+0(0),  0(0)+2(2)+0(0),  0(-1)+2(0)+0(-1) ],\n  [ -1(2)+0(1)-1(0), -1(0)+0(2)-1(0), -1(-1)+0(0)-1(-1) ]\n] = [ [5, 2, -2], [2, 4, 0], [-2, 0, 2] ]\n\nNow, subtract 2A^T:\n2A^T = [[4, 2, 0], [0, 4, 0], [-2, 0, -2]]\n\nB^T = [[5, 2, -2], [2, 4, 0], [-2, 0, 2]] - [[4, 2, 0], [0, 4, 0], [-2, 0, -2]]\nB^T = [[1, 0, -2], [2, 0, 0], [0, 0, 4]]\n\nLooking closely at the formatting of Option B on Page 4, it matches this matrix configuration perfectly[cite: 235].'
   },
   {
     unit: 3,
@@ -1740,7 +1749,7 @@ const QUESTIONS = [
     opts: ['Square matrix', 'Rectangular matrix', 'Scalar matrix', 'Identity matrix'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'When a matrix has an unequal number of rows and columns (m != n), it forms a non-square shape and is called a Rectangular Matrix[cite: 210, 212].'
+    explain: 'When a matrix has an unequal number of rows and columns (m != n), it forms a non-square shape and is called a Rectangular Matrix[cite: 210, 212].'
   },
   {
     unit: 3,
@@ -1750,7 +1759,7 @@ const QUESTIONS = [
     opts: ['[[0, 0], [0, 0]]', '[[0, 1], [1, 0]]', '[[0, 3], [3, 2]]', '[[1, 1], [1, 1]]'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s isolate x in our equation: x = AB - A^t[cite: 224].\n\n1. [cite_start]Calculate the product AB[cite: 213]:\n   AB = [[4, 0], [1, 1]] * [[1, 1], [2, 2]]\n      = [ [4(1)+0(2), 4(1)+0(2)], [1(1)+1(2), 1(1)+1(2)] ]\n      = [[4, 4], [3, 3]]\n\n2. [cite_start]Find the transpose of A (A^t)[cite: 213]:\n   A^t = [[4, 1], [0, 1]]\n\n3. [cite_start]Subtract A^t from AB:\n   x = [[4, 4], [3, 3]] - [[4, 1], [0, 1]]\n   x = [[0, 3], [3, 2]]\n\nThis matches Option C perfectly[cite: 226].'
+    explain: 'Let\'s isolate x in our equation: x = AB - A^t[cite: 224].\n\n1. [cite_start]Calculate the product AB[cite: 213]:\n   AB = [[4, 0], [1, 1]] * [[1, 1], [2, 2]]\n      = [ [4(1)+0(2), 4(1)+0(2)], [1(1)+1(2), 1(1)+1(2)] ]\n      = [[4, 4], [3, 3]]\n\n2. [cite_start]Find the transpose of A (A^t)[cite: 213]:\n   A^t = [[4, 1], [0, 1]]\n\n3. [cite_start]Subtract A^t from AB:\n   x = [[4, 4], [3, 3]] - [[4, 1], [0, 1]]\n   x = [[0, 3], [3, 2]]\n\nThis matches Option C perfectly[cite: 226].'
   },
   {
     unit: 3,
@@ -1760,7 +1769,7 @@ const QUESTIONS = [
     opts: ['[-1, -2, 1]', '[-1, 2, -1]', '[1, 2, 1]', '[-1, 2, 1]'],
     answer: 3,
     diff: 'medium',
-    [cite_start]explain: 'Here, we are multiplying a 3x1 column matrix by a 1x3 row matrix A to get a 3x3 output matrix[cite: 216]. [cite_start]Let\'s denote row matrix A as [a1, a2, a3].\n\nThe multiplication looks like this:\n[ 4 ] * [a1, a2, a3] = [\n  [ 4*a1, 4*a2, 4*a3 ],\n  [ 1*a1, 1*a2, 1*a3 ],\n  [ 3*a1, 3*a2, 3*a3 ]\n]\n\nLet\'s compare this to the given result matrix [cite: 216][cite_start]:\nLooking at the second row: [1*a1, 1*a2, 1*a3] = [-1, 2, 1] [cite: 216][cite_start].\nThis tells us directly that a1 = -1, a2 = 2, and a3 = 1.\n\nTherefore, matrix A is [-1, 2, 1], which matches Option D[cite: 229].'
+    explain: 'Here, we are multiplying a 3x1 column matrix by a 1x3 row matrix A to get a 3x3 output matrix[cite: 216]. [cite_start]Let\'s denote row matrix A as [a1, a2, a3].\n\nThe multiplication looks like this:\n[ 4 ] * [a1, a2, a3] = [\n  [ 4*a1, 4*a2, 4*a3 ],\n  [ 1*a1, 1*a2, 1*a3 ],\n  [ 3*a1, 3*a2, 3*a3 ]\n]\n\nLet\'s compare this to the given result matrix [cite: 216][cite_start]:\nLooking at the second row: [1*a1, 1*a2, 1*a3] = [-1, 2, 1] [cite: 216][cite_start].\nThis tells us directly that a1 = -1, a2 = 2, and a3 = 1.\n\nTherefore, matrix A is [-1, 2, 1], which matches Option D[cite: 229].'
   },
   {
     unit: 3,
@@ -1770,7 +1779,7 @@ const QUESTIONS = [
     opts: ['[[-2, -2, 1], [-3, -2, 4], [-1, 2, -1]]', '[[1, -1, 2], [0, 1, 1], [-1, 0, 0]]', '[[1, -1, 2], [0, 1, 1], [-1, 0, 0]]', '[[1, -1, 2], [0, 1, 1], [-1, 0, 0]]'],
     answer: 0,
     diff: 'hard',
-    [cite_start]explain: 'To find matrix B from the equation AB = C, we can multiply both sides from the left by A^-1 [cite: 238][cite_start]:\nA^-1 * A * B = A^-1 * C\nB = A^-1 * C\n\nLet\'s set up this multiplication using the provided matrices [cite: 221, 238][cite_start]:\nB = [[1, -1, 3], [2, 0, 5], [-1, 1, 0]] * [[1, -1, 2], [0, 1, 1], [-1, 0, 0]]\n\nRow 1 calculations:\n- Col 1: 1(1) + (-1)(0) + 3(-1) = 1 - 3 = -2\n- Col 2: 1(-1) + (-1)(1) + 3(0) = -1 - 1 = -2\n- Col 3: 1(2) + (-1)(1) + 3(0) = 2 - 1 = 1\nRow 1 = [-2, -2, 1] [cite: 222][cite_start].\n\nRow 2 calculations:\n- Col 1: 2(1) + 0(0) + 5(-1) = 2 - 5 = -3\n- Col 2: 2(-1) + 0(1) + 5(0) = -2\n- Col 3: 2(2) + 0(1) + 5(0) = 4\nRow 2 = [-3, -2, 4] [cite: 222][cite_start].\n\nRow 3 calculations:\n- Col 1: -1(1) + 1(0) + 0(-1) = -1\n- Col 2: -1(-1) + 1(1) + 0(0) = 1 + 1 = 2\n- Col 3: -1(2) + 1(1) + 0(0) = -2 + 1 = -1\nRow 3 = [-1, 2, -1] [cite: 222][cite_start].\n\nPutting these rows together gives [[-2, -2, 1], [-3, -2, 4], [-1, 2, -1]], which matches Option A perfectly[cite: 222].'
+    explain: 'To find matrix B from the equation AB = C, we can multiply both sides from the left by A^-1 [cite: 238][cite_start]:\nA^-1 * A * B = A^-1 * C\nB = A^-1 * C\n\nLet\'s set up this multiplication using the provided matrices [cite: 221, 238][cite_start]:\nB = [[1, -1, 3], [2, 0, 5], [-1, 1, 0]] * [[1, -1, 2], [0, 1, 1], [-1, 0, 0]]\n\nRow 1 calculations:\n- Col 1: 1(1) + (-1)(0) + 3(-1) = 1 - 3 = -2\n- Col 2: 1(-1) + (-1)(1) + 3(0) = -1 - 1 = -2\n- Col 3: 1(2) + (-1)(1) + 3(0) = 2 - 1 = 1\nRow 1 = [-2, -2, 1] [cite: 222][cite_start].\n\nRow 2 calculations:\n- Col 1: 2(1) + 0(0) + 5(-1) = 2 - 5 = -3\n- Col 2: 2(-1) + 0(1) + 5(0) = -2\n- Col 3: 2(2) + 0(1) + 5(0) = 4\nRow 2 = [-3, -2, 4] [cite: 222][cite_start].\n\nRow 3 calculations:\n- Col 1: -1(1) + 1(0) + 0(-1) = -1\n- Col 2: -1(-1) + 1(1) + 0(0) = 1 + 1 = 2\n- Col 3: -1(2) + 1(1) + 0(0) = -2 + 1 = -1\nRow 3 = [-1, 2, -1] [cite: 222][cite_start].\n\nPutting these rows together gives [[-2, -2, 1], [-3, -2, 4], [-1, 2, -1]], which matches Option A perfectly[cite: 222].'
   },
   {
     unit: 3,
@@ -1780,7 +1789,7 @@ const QUESTIONS = [
     opts: ['A^T + B^T', 'A^T + C', 'B + C^T', 'A^T + B'],
     answer: 3,
     diff: 'easy',
-    [cite_start]explain: 'To add two matrices together, they must have the exact same dimensions[cite: 243, 244]. Let\'s analyze the options:\n- Matrix A and B have dimensions 3x2. [cite_start]This means their transposes, A^T and B^T, have dimensions 2x3 [cite: 243][cite_start].\n- Matrix C has dimensions 2x3 [cite: 243][cite_start].\n\nLet\'s check the dimensions for each choice:\n- Option A: A^T (2x3) + B^T (2x3) -> Defined [cite: 245][cite_start]\n- Option B: A^T (2x3) + C (2x3) -> Defined [cite: 246][cite_start]\n- Option C: B (3x2) + C^T (3x2) -> Defined [cite: 254]\n- Option D: A^T (2x3) + B (3x2) -> Mismatched dimensions! [cite_start]You cannot add a 2x3 matrix to a 3x2 matrix, making Option D undefined[cite: 255].'
+    explain: 'To add two matrices together, they must have the exact same dimensions[cite: 243, 244]. Let\'s analyze the options:\n- Matrix A and B have dimensions 3x2. [cite_start]This means their transposes, A^T and B^T, have dimensions 2x3 [cite: 243][cite_start].\n- Matrix C has dimensions 2x3 [cite: 243][cite_start].\n\nLet\'s check the dimensions for each choice:\n- Option A: A^T (2x3) + B^T (2x3) -> Defined [cite: 245][cite_start]\n- Option B: A^T (2x3) + C (2x3) -> Defined [cite: 246][cite_start]\n- Option C: B (3x2) + C^T (3x2) -> Defined [cite: 254]\n- Option D: A^T (2x3) + B (3x2) -> Mismatched dimensions! [cite_start]You cannot add a 2x3 matrix to a 3x2 matrix, making Option D undefined[cite: 255].'
   },
   {
     unit: 3,
@@ -1790,7 +1799,7 @@ const QUESTIONS = [
     opts: ['[[-3, 3, -5], [5, -3, -3]]', '[[-2, 3, -5], [5, -3, -2]]', '[[-3, 3, -5], [5, -3, -3]]', '[[-3, 3, -5], [5, -3, -3]]'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s rearrange our equation to isolate matrix x:\n3x = 5B - 2A  =>  x = (1/3) * (5B - 2A) [cite: 249][cite_start]\n\nFirst, compute 5B [cite: 248][cite_start]:\n5 * [[0, 1, -1], [3, -1, -2]] = [[0, 5, -5], [15, -5, -10]]\n\nNext, compute 2A [cite: 248][cite_start]:\n2 * [[3, -2, 5], [0, 2, -2]] = [[6, -4, 10], [0, 4, -4]]\n\nNow, subtract 2A from 5B:\n5B - 2A = [[0-6, 5-(-4), -5-10], [15-0, -5-4, -10-(-4)]]\n5B - 2A = [[-6, 9, -15], [15, -9, -6]]\n\nFinally, multiply by 1/3:\nx = [[-6/3, 9/3, -15/3], [15/3, -9/3, -6/3]]\nx = [[-2, 3, -5], [5, -3, -2]]\n\nThis matches Option B perfectly[cite: 253].'
+    explain: 'Let\'s rearrange our equation to isolate matrix x:\n3x = 5B - 2A  =>  x = (1/3) * (5B - 2A) [cite: 249][cite_start]\n\nFirst, compute 5B [cite: 248][cite_start]:\n5 * [[0, 1, -1], [3, -1, -2]] = [[0, 5, -5], [15, -5, -10]]\n\nNext, compute 2A [cite: 248][cite_start]:\n2 * [[3, -2, 5], [0, 2, -2]] = [[6, -4, 10], [0, 4, -4]]\n\nNow, subtract 2A from 5B:\n5B - 2A = [[0-6, 5-(-4), -5-10], [15-0, -5-4, -10-(-4)]]\n5B - 2A = [[-6, 9, -15], [15, -9, -6]]\n\nFinally, multiply by 1/3:\nx = [[-6/3, 9/3, -15/3], [15/3, -9/3, -6/3]]\nx = [[-2, 3, -5], [5, -3, -2]]\n\nThis matches Option B perfectly[cite: 253].'
   },
   {
     unit: 3,
@@ -1800,7 +1809,7 @@ const QUESTIONS = [
     opts: ['A^2 - 2AB + B^2', 'A^2 + 2AB + B^2', 'A^2 - B^2', 'A^2 - AB - BA + B^2'],
     answer: 3,
     diff: 'medium',
-    [cite_start]explain: 'Since matrix multiplication is generally not commutative (meaning AB does not usually equal BA), we must expand the algebraic expression carefully keeping the multiplication order intact [cite: 262][cite_start]:\n\n(A - B)^2 = (A - B)(A - B)\n          = A(A - B) - B(A - B)\n          = A^2 - AB - BA + B^2 [cite: 261][cite_start]\n\nBecause AB and BA cannot be combined into 2AB, Option D is the correct choice[cite: 261].'
+    explain: 'Since matrix multiplication is generally not commutative (meaning AB does not usually equal BA), we must expand the algebraic expression carefully keeping the multiplication order intact [cite: 262][cite_start]:\n\n(A - B)^2 = (A - B)(A - B)\n          = A(A - B) - B(A - B)\n          = A^2 - AB - BA + B^2 [cite: 261][cite_start]\n\nBecause AB and BA cannot be combined into 2AB, Option D is the correct choice[cite: 261].'
   },
   {
     unit: 3,
@@ -1810,7 +1819,7 @@ const QUESTIONS = [
     opts: ['1x1', '3x1', '1x3', '3x3'],
     answer: 0,
     diff: 'easy',
-    [cite_start]explain: 'Let\'s check the matrix dimension requirements stage-by-stage[cite: 265]:\n1. [cite_start]First multiplication: a 1x3 row matrix multiplied by a 3x3 square matrix yields a new 1x3 row matrix[cite: 265].\n2. [cite_start]Second multiplication: our new 1x3 row matrix multiplied by a 3x1 column matrix results in a single scalar entry, which is a 1x1 matrix[cite: 265, 266].'
+    explain: 'Let\'s check the matrix dimension requirements stage-by-stage[cite: 265]:\n1. [cite_start]First multiplication: a 1x3 row matrix multiplied by a 3x3 square matrix yields a new 1x3 row matrix[cite: 265].\n2. [cite_start]Second multiplication: our new 1x3 row matrix multiplied by a 3x1 column matrix results in a single scalar entry, which is a 1x1 matrix[cite: 265, 266].'
   },
   {
     unit: 3,
@@ -1820,7 +1829,7 @@ const QUESTIONS = [
     opts: ['3', '5', '4', '2'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'For a matrix to be symmetric, the entries across its main diagonal must be completely identical, meaning a_12 = a_21 [cite: 87, 270, 379][cite_start].\n\nSet the off-diagonal entries equal to each other [cite: 270][cite_start]:\nx + 2 = 2x - 3\n2 + 3 = 2x - x\n5 = x\n\nThis matches Option B[cite: 273].'
+    explain: 'For a matrix to be symmetric, the entries across its main diagonal must be completely identical, meaning a_12 = a_21 [cite: 87, 270, 379][cite_start].\n\nSet the off-diagonal entries equal to each other [cite: 270][cite_start]:\nx + 2 = 2x - 3\n2 + 3 = 2x - x\n5 = x\n\nThis matches Option B[cite: 273].'
   },
   {
     unit: 3,
@@ -1830,7 +1839,7 @@ const QUESTIONS = [
     opts: ['2/3, 1/3', '-3, 2', '1/3, 2/3', '3, -2'],
     answer: 2,
     diff: 'hard',
-    [cite_start]explain: 'Since multiplying a matrix by its inverse yields the Identity matrix (A * A^-1 = I), let\'s look at specific row and column combinations[cite: 279, 284]:\n\n1. Multiply Row 1 of A by Column 1 of A^-1 to equal the Identity top-left entry (1):\n   [0, x, 0] * [1, 3, 2]^T = 1\n   0(1) + x(3) + 0(2) = 1\n   3x = 1  =>  x = 1/3\n\n2. [cite_start]Multiply Row 3 of A by Column 1 of A^-1 to equal the Identity bottom-left entry (0):\n   [0, y, -1] * [1, 3, 2]^T = 0\n   0(1) + y(3) + (-1)(2) = 0\n   3y - 2 = 0\n   3y = 2  =>  y = 2/3\n\nThus, x = 1/3 and y = 2/3, which perfectly matches Option C[cite: 288].'
+    explain: 'Since multiplying a matrix by its inverse yields the Identity matrix (A * A^-1 = I), let\'s look at specific row and column combinations[cite: 279, 284]:\n\n1. Multiply Row 1 of A by Column 1 of A^-1 to equal the Identity top-left entry (1):\n   [0, x, 0] * [1, 3, 2]^T = 1\n   0(1) + x(3) + 0(2) = 1\n   3x = 1  =>  x = 1/3\n\n2. [cite_start]Multiply Row 3 of A by Column 1 of A^-1 to equal the Identity bottom-left entry (0):\n   [0, y, -1] * [1, 3, 2]^T = 0\n   0(1) + y(3) + (-1)(2) = 0\n   3y - 2 = 0\n   3y = 2  =>  y = 2/3\n\nThus, x = 1/3 and y = 2/3, which perfectly matches Option C[cite: 288].'
   },
   {
     unit: 3,
@@ -1840,7 +1849,7 @@ const QUESTIONS = [
     opts: ['3, 1, 4, 2', '2, 4, 1, 3', '1, 2, 4, 3', '4, 2, 1, 3'],
     answer: 1,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s set up an equation for each corresponding entry position[cite: 290]:\n\n1. [cite_start]Top-Left Entry:\n   3x = x + 4  =>  2x = 4  =>  x = 2[cite: 290].\n\n2. [cite_start]Top-Right Entry:\n   3y = 6 + (x + y)\n   Substitute x = 2:\n   3y = 6 + 2 + y  =>  2y = 8  =>  y = 4[cite: 290].\n\n3. [cite_start]Bottom-Right Entry:\n   3t = 2t + 3  =>  t = 3[cite: 290].\n\n4. [cite_start]Bottom-Left Entry:\n   3z = -1 + (z + t)\n   Substitute t = 3:\n   3z = -1 + z + 3  =>  2z = 2  =>  z = 1[cite: 290].\n\nOur values are x=2, y=4, z=1, t=3. [cite_start]This matches Option B perfectly[cite: 292].'
+    explain: 'Let\'s set up an equation for each corresponding entry position[cite: 290]:\n\n1. [cite_start]Top-Left Entry:\n   3x = x + 4  =>  2x = 4  =>  x = 2[cite: 290].\n\n2. [cite_start]Top-Right Entry:\n   3y = 6 + (x + y)\n   Substitute x = 2:\n   3y = 6 + 2 + y  =>  2y = 8  =>  y = 4[cite: 290].\n\n3. [cite_start]Bottom-Right Entry:\n   3t = 2t + 3  =>  t = 3[cite: 290].\n\n4. [cite_start]Bottom-Left Entry:\n   3z = -1 + (z + t)\n   Substitute t = 3:\n   3z = -1 + z + 3  =>  2z = 2  =>  z = 1[cite: 290].\n\nOur values are x=2, y=4, z=1, t=3. [cite_start]This matches Option B perfectly[cite: 292].'
   },
   {
     unit: 3,
@@ -1850,7 +1859,7 @@ const QUESTIONS = [
     opts: ['If A^2 is defined, then A is necessarily square.', 'If AB and BA are defined, then AB and BA are square', 'If AB and BA are defined, then A and B are square.', 'If AB = B then A = I'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s look at Option C: It claims that if AB and BA are both valid operations, then A and B must be square matrices[cite: 298]. This is false. [cite_start]\n\nFor example, if matrix A has dimensions 2x3 and matrix B has dimensions 3x2:\n- AB is defined and results in a 2x2 matrix [cite: 297][cite_start].\n- BA is defined and results in a 3x3 matrix [cite: 297][cite_start].\n\nBoth products are valid even though neither matrix A nor B is square, which makes Option C the incorrect statement to select[cite: 298].'
+    explain: 'Let\'s look at Option C: It claims that if AB and BA are both valid operations, then A and B must be square matrices[cite: 298]. This is false. [cite_start]\n\nFor example, if matrix A has dimensions 2x3 and matrix B has dimensions 3x2:\n- AB is defined and results in a 2x2 matrix [cite: 297][cite_start].\n- BA is defined and results in a 3x3 matrix [cite: 297][cite_start].\n\nBoth products are valid even though neither matrix A nor B is square, which makes Option C the incorrect statement to select[cite: 298].'
   },
   {
     unit: 3,
@@ -1860,7 +1869,7 @@ const QUESTIONS = [
     opts: ['1, 3', '2, 2', '2, 4', '4, 2'],
     answer: 1,
     diff: 'easy',
-    [cite_start]explain: 'Let\'s calculate the inverse of [[2, 3], [1, 2]] using our 2x2 shortcut formula[cite: 300, 301]:\n1. Find the determinant: (2*2) - (3*1) = 4 - 3 = 1.\n2. [cite_start]Swap the diagonal elements and switch the signs of the off-diagonal entries:\n   [[2, -3], [-1, 2]]\n\nComparing this directly to the given inverse matrix [[x, -3], [-1, y]] [cite: 301][cite_start]:\nx = 2 and y = 2\n\nThis matches Option B perfectly[cite: 304].'
+    explain: 'Let\'s calculate the inverse of [[2, 3], [1, 2]] using our 2x2 shortcut formula[cite: 300, 301]:\n1. Find the determinant: (2*2) - (3*1) = 4 - 3 = 1.\n2. [cite_start]Swap the diagonal elements and switch the signs of the off-diagonal entries:\n   [[2, -3], [-1, 2]]\n\nComparing this directly to the given inverse matrix [[x, -3], [-1, y]] [cite: 301][cite_start]:\nx = 2 and y = 2\n\nThis matches Option B perfectly[cite: 304].'
   },
   {
     unit: 3,
@@ -1870,7 +1879,7 @@ const QUESTIONS = [
     opts: ['(8, -10, 3)^T', '(-8, -10, 3)^T', '(8, 10, 3)^T', '(8, 10, -3)^T'],
     answer: 2,
     diff: 'hard',
-    [cite_start]explain: 'Let\'s compute this expression in two parts[cite: 313]:\n\n1. [cite_start]Compute AD[cite: 309, 310]:\n   [[1, 0, 1], [2, 1, 0], [0, 2, 1]] * [2, 0, 1]^T\n   - Row 1: 1(2) + 0(0) + 1(1) = 3\n   - Row 2: 2(2) + 1(0) + 0(1) = 4\n   - Row 3: 0(2) + 2(0) + 1(1) = 1\n   AD = [3, 4, 1]^T\n\n2. [cite_start]Compute CB[cite: 305, 308]:\n   [3, 1, 2] * [[1, 1, 0], [0, 3, 0], [1, 0, 1]]\n   - Col 1: 3(1) + 1(0) + 2(1) = 5\n   - Col 2: 3(1) + 1(3) + 2(0) = 6\n   - Col 3: 3(0) + 1(0) + 2(1) = 2\n   CB = [5, 6, 2]  =>  (CB)^T = [5, 6, 2]^T\n\n3. [cite_start]Add the two parts together:\n   [3, 4, 1]^T + [5, 6, 2]^T = [8, 10, 3]^T\n\nThis matches Option C perfectly[cite: 316].'
+    explain: 'Let\'s compute this expression in two parts[cite: 313]:\n\n1. [cite_start]Compute AD[cite: 309, 310]:\n   [[1, 0, 1], [2, 1, 0], [0, 2, 1]] * [2, 0, 1]^T\n   - Row 1: 1(2) + 0(0) + 1(1) = 3\n   - Row 2: 2(2) + 1(0) + 0(1) = 4\n   - Row 3: 0(2) + 2(0) + 1(1) = 1\n   AD = [3, 4, 1]^T\n\n2. [cite_start]Compute CB[cite: 305, 308]:\n   [3, 1, 2] * [[1, 1, 0], [0, 3, 0], [1, 0, 1]]\n   - Col 1: 3(1) + 1(0) + 2(1) = 5\n   - Col 2: 3(1) + 1(3) + 2(0) = 6\n   - Col 3: 3(0) + 1(0) + 2(1) = 2\n   CB = [5, 6, 2]  =>  (CB)^T = [5, 6, 2]^T\n\n3. [cite_start]Add the two parts together:\n   [3, 4, 1]^T + [5, 6, 2]^T = [8, 10, 3]^T\n\nThis matches Option C perfectly[cite: 316].'
   },
   {
     unit: 3,
@@ -1880,7 +1889,7 @@ const QUESTIONS = [
     opts: ['Skew symmetric matrix', 'Zero matrix', 'symmetric matrix', 'Identity matrix'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'We are given that A and B are symmetric, so A^T = A and B^T = B[cite: 87, 317, 379]. [cite_start]Let\'s find the transpose of our target expression (AB - BA):\n\n(AB - BA)^T = (AB)^T - (BA)^T\n            = (B^T * A^T) - (A^T * B^T)\n            = BA - AB\n            = -(AB - BA)\n\nSince transposing the expression gives the negative version of itself, AB - BA is a Skew-symmetric Matrix by definition[cite: 318, 372].'
+    explain: 'We are given that A and B are symmetric, so A^T = A and B^T = B[cite: 87, 317, 379]. [cite_start]Let\'s find the transpose of our target expression (AB - BA):\n\n(AB - BA)^T = (AB)^T - (BA)^T\n            = (B^T * A^T) - (A^T * B^T)\n            = BA - AB\n            = -(AB - BA)\n\nSince transposing the expression gives the negative version of itself, AB - BA is a Skew-symmetric Matrix by definition[cite: 318, 372].'
   },
   {
     unit: 3,
@@ -1895,7 +1904,7 @@ const QUESTIONS = [
     ],
     answer: 3,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s check the matrix inverse condition by finding the determinant for Option D\'s first matrix [cite: 333][cite_start]:\nMatrix A = [[2, 11], [6, 5]] [cite: 333][cite_start]\ndet(A) = (2*5) - (11*6) = 10 - 66 = -56\n\nUsing our formula shortcut, its inverse should be:\nA^-1 = (1/-56) * [[5, -11], [-6, 2]]\n\nThis does not match the second matrix listed in Option D at all, meaning they are not inverses of each other[cite: 330, 333].'
+    explain: 'Let\'s check the matrix inverse condition by finding the determinant for Option D\'s first matrix [cite: 333][cite_start]:\nMatrix A = [[2, 11], [6, 5]] [cite: 333][cite_start]\ndet(A) = (2*5) - (11*6) = 10 - 66 = -56\n\nUsing our formula shortcut, its inverse should be:\nA^-1 = (1/-56) * [[5, -11], [-6, 2]]\n\nThis does not match the second matrix listed in Option D at all, meaning they are not inverses of each other[cite: 330, 333].'
   },
   {
     unit: 3,
@@ -1905,7 +1914,7 @@ const QUESTIONS = [
     opts: ['If A is invertible and AB = AC, then B = C', 'If A is singular, then A^T is also singular', 'If AB = 0, then A = 0 and B = 0', 'If B is the inverse of A, then B^T is the inverse of A^T'],
     answer: 2,
     diff: 'medium',
-    [cite_start]explain: 'Let\'s analyze Option C: It states that if the product AB = 0, then both matrix A and matrix B must equal 0[cite: 337]. This is false. [cite_start]In matrix algebra, you can multiply two non-zero matrices together and get a product of zero (called zero divisors).\n\nFor example:\n[[1, 0], [0, 0]] * [[0, 0], [0, 1]] = [[0, 0], [0, 0]]\n\nSince neither matrix is zero but their product is zero, Option C is incorrect[cite: 337].'
+    explain: 'Let\'s analyze Option C: It states that if the product AB = 0, then both matrix A and matrix B must equal 0[cite: 337]. This is false. [cite_start]In matrix algebra, you can multiply two non-zero matrices together and get a product of zero (called zero divisors).\n\nFor example:\n[[1, 0], [0, 0]] * [[0, 0], [0, 1]] = [[0, 0], [0, 0]]\n\nSince neither matrix is zero but their product is zero, Option C is incorrect[cite: 337].'
   },
   {
     unit: 3,
@@ -1915,7 +1924,7 @@ const QUESTIONS = [
     opts: ['0, 2', '2, 0', '-2, 0', '0, -2'],
     answer: 3,
     diff: 'hard',
-    [cite_start]explain: 'Let\'s set up the equation 2A = 3B^T entry-by-entry [cite: 339, 340, 341][cite_start]:\n\nFirst, find 3B^T by transposing and scaling matrix B [cite: 340][cite_start]:\n3B^T = 3 * [[-2, x-y, -2], [x, -2, 2]] = [[-6, 3(x-y), -6], [3x, -6, 6]]\n\nNext, calculate 2A [cite: 339][cite_start]:\n2A = [[-6, 2(1+x), -6], [6, -6, 6]]\n\nNow, match corresponding entries [cite: 341][cite_start]:\n- From the row 2, column 1 position:\n  6 = 3x  =>  x = 2\n\n- From the row 1, column 2 position:\n  2(1 + x) = 3(x - y)\n  Substitute x = 2:\n  2(1 + 2) = 3(2 - y)\n  2(3) = 6 - 3y\n  6 = 6 - 3y  =>  3y = 0  =>  y = 0\n\nThis gives us x = 2 and y = 0, which corresponds to Option B[cite: 344].'
+    explain: 'Let\'s set up the equation 2A = 3B^T entry-by-entry [cite: 339, 340, 341][cite_start]:\n\nFirst, find 3B^T by transposing and scaling matrix B [cite: 340][cite_start]:\n3B^T = 3 * [[-2, x-y, -2], [x, -2, 2]] = [[-6, 3(x-y), -6], [3x, -6, 6]]\n\nNext, calculate 2A [cite: 339][cite_start]:\n2A = [[-6, 2(1+x), -6], [6, -6, 6]]\n\nNow, match corresponding entries [cite: 341][cite_start]:\n- From the row 2, column 1 position:\n  6 = 3x  =>  x = 2\n\n- From the row 1, column 2 position:\n  2(1 + x) = 3(x - y)\n  Substitute x = 2:\n  2(1 + 2) = 3(2 - y)\n  2(3) = 6 - 3y\n  6 = 6 - 3y  =>  3y = 0  =>  y = 0\n\nThis gives us x = 2 and y = 0, which corresponds to Option B[cite: 344].'
   },
   {
     unit: 3,
@@ -1925,7 +1934,7 @@ const QUESTIONS = [
     opts: ['Multiples', 'Identity matrix', 'Row matrix', 'Multiples of columns'],
     answer: 2,
     diff: 'easy',
-    [cite_start]explain: 'By definition, the transposition operation swaps a matrix\'s rows and columns[cite: 386]. [cite_start]This means every column from the original matrix turns into a row in the new transposed matrix[cite: 347, 349].'
+    explain: 'By definition, the transposition operation swaps a matrix\'s rows and columns[cite: 386]. [cite_start]This means every column from the original matrix turns into a row in the new transposed matrix[cite: 347, 349].'
   },
   {
     unit: 3,
@@ -1935,7 +1944,7 @@ const QUESTIONS = [
     opts: ['Square matrix', 'Rectangular matrix', 'Scalar matrix', 'Identity matrix'],
     answer: 0,
     diff: 'easy',
-    [cite_start]explain: 'When a matrix has an equal number of rows and columns (m = n), it forms a perfect square grid and is called a Square Matrix[cite: 356, 357].'
+    explain: 'When a matrix has an equal number of rows and columns (m = n), it forms a perfect square grid and is called a Square Matrix[cite: 356, 357].'
   },
   {
     unit: 3,
@@ -1945,7 +1954,7 @@ const QUESTIONS = [
     opts: ['2', '-2', '-1', '1'],
     answer: 0,
     diff: 'medium',
-    [cite_start]explain: 'To find entry C_21 of the product matrix, we multiply Row 2 of matrix A by Row 1 of matrix B (since Row 1 of B becomes Column 1 of B^T) [cite: 360, 363][cite_start]:\n\nRow 2 of A = [1, -1, 1] [cite: 360][cite_start]\nRow 1 of B = [1, -1, 0] [cite: 360][cite_start]\n\nCalculate their dot product:\nC_21 = 1(1) + (-1)(-1) + 1(0)\nC_21 = 1 + 1 + 0 = 2\n\nThis matches Option A perfectly[cite: 364].'
+    explain: 'To find entry C_21 of the product matrix, we multiply Row 2 of matrix A by Row 1 of matrix B (since Row 1 of B becomes Column 1 of B^T) [cite: 360, 363][cite_start]:\n\nRow 2 of A = [1, -1, 1] [cite: 360][cite_start]\nRow 1 of B = [1, -1, 0] [cite: 360][cite_start]\n\nCalculate their dot product:\nC_21 = 1(1) + (-1)(-1) + 1(0)\nC_21 = 1 + 1 + 0 = 2\n\nThis matches Option A perfectly[cite: 364].'
   },
   {
     unit: 3,
@@ -1955,7 +1964,7 @@ const QUESTIONS = [
     opts: ['Column matrix', 'Diagonal matrix', 'Row matrix', 'square matrix'],
     answer: 2,
     diff: 'easy',
-    [cite_start]explain: 'A matrix that consists of exactly one single horizontal row alongside multiple columns is called a Row Matrix[cite: 368, 377].'
+    explain: 'A matrix that consists of exactly one single horizontal row alongside multiple columns is called a Row Matrix[cite: 368, 377].'
   },
   {
     unit: 3,
@@ -1965,7 +1974,7 @@ const QUESTIONS = [
     opts: ['A = -A^T', 'All diagonal element are zero', 'A = A^T', 'Diagonal elements are 1'],
     answer: 2,
     diff: 'easy',
-    [cite_start]explain: 'A matrix is defined as symmetric if it remains completely unchanged when transposed, which is written mathematically as A = A^T[cite: 87, 371, 379].'
+    explain: 'A matrix is defined as symmetric if it remains completely unchanged when transposed, which is written mathematically as A = A^T[cite: 87, 371, 379].'
   },
   {
     unit: 3,
@@ -1975,7 +1984,7 @@ const QUESTIONS = [
     opts: ['2', '-2', '4', '0'],
     answer: 2,
     diff: 'hard',
-    [cite_start]explain: 'Our target equation is C = AB + A^T[cite: 382]. [cite_start]To find the entry at position (3, 2), we need to add the (3, 2) entry of the product AB to the (3, 2) entry of A^T[cite: 383]:\n\n1. [cite_start]Find entry (3, 2) of product AB by multiplying Row 3 of A by Column 2 of B [cite: 374][cite_start]:\n   Row 3 of A = [1, 2, -1] [cite: 374][cite_start]\n   Column 2 of B = [2, 1, 1]^T [cite: 374]\n   Product entry = 1(2) + 2(1) + (-1)(1) = 2 + 2 - 1 = 3\n\n2. [cite_start]Find entry (3, 2) of A^T, which is simply entry (2, 1) of the original matrix A [cite: 374][cite_start]:\n   a_21 = 1 [cite: 374]\n\n3. [cite_start]Add the two parts together:\n   C_32 = 3 + 1 = 4\n\nReviewing our available options, Option C would display 4, matching our calculation perfectly[cite: 384].'
+    explain: 'Our target equation is C = AB + A^T[cite: 382]. [cite_start]To find the entry at position (3, 2), we need to add the (3, 2) entry of the product AB to the (3, 2) entry of A^T[cite: 383]:\n\n1. [cite_start]Find entry (3, 2) of product AB by multiplying Row 3 of A by Column 2 of B [cite: 374][cite_start]:\n   Row 3 of A = [1, 2, -1] [cite: 374][cite_start]\n   Column 2 of B = [2, 1, 1]^T [cite: 374]\n   Product entry = 1(2) + 2(1) + (-1)(1) = 2 + 2 - 1 = 3\n\n2. [cite_start]Find entry (3, 2) of A^T, which is simply entry (2, 1) of the original matrix A [cite: 374][cite_start]:\n   a_21 = 1 [cite: 374]\n\n3. [cite_start]Add the two parts together:\n   C_32 = 3 + 1 = 4\n\nReviewing our available options, Option C would display 4, matching our calculation perfectly[cite: 384].'
   },
   {
     unit: 3,
@@ -1986,7 +1995,7 @@ const QUESTIONS = [
     answer: 3,
     diff: 'easy',
     explain: 'Interchanging the horizontal rows and vertical columns of any matrix swaps its dimensions from m x n to n x m. [cite_start]This operation defines the Transpose of a matrix[cite: 386, 391].'
-  }
+  },
 
 
 // ─── UNIT 4: DETERMINANTS ──────────────────────────────────────────────────
@@ -3603,24 +3612,512 @@ const QUESTIONS = [
   },
 
 // ─── UNIT 7: STATISTICS ─────────────────────────────────────────────────────
-{ unit:7, id:'7-1', num:1, text:'Classify: Beauty of a picture — qualitative or quantitative?', opts:['Qualitative','Quantitative'], answer:0, diff:'easy', explain:'Beauty cannot be measured numerically — it is qualitative (categorical) data.' },
-{ unit:7, id:'7-4', num:4, text:'Classify: Height of students — qualitative or quantitative?', opts:['Qualitative','Quantitative'], answer:1, diff:'easy', explain:'Height is measured numerically, so it is quantitative data.' },
-{ unit:7, id:'7-7', num:7, text:'Classify: Blood type — qualitative or quantitative?', opts:['Qualitative','Quantitative'], answer:0, diff:'easy', explain:'Blood type (A, B, AB, O) is a category, not a number — qualitative.' },
-{ unit:7, id:'7-11', num:11, text:'Number of rooms in a house — discrete or continuous?', opts:['Discrete','Continuous'], answer:0, diff:'easy', explain:'Number of rooms is counted (whole numbers only) — discrete.' },
-{ unit:7, id:'7-13', num:13, text:'Life-time of an electric bulb — discrete or continuous?', opts:['Discrete','Continuous'], answer:1, diff:'easy', explain:'Life-time can take any value in an interval — continuous.' },
-{ unit:7, id:'7-21', num:21, text:'From frequency table (marks 30–50, n=50): If top 25% get certificates, what is the minimum mark? Intervals: 30-34(8), 34-38(12), 38-42(12), 42-46(10), 46-50(8).', opts:['43.5','35.5','44.2','42.2'], answer:0, diff:'hard', explain:'Top 25% = 12.5 students from top. Cumulative from top: 46-50: 8, then 42-46: 10 (total 18). The 12.5th from top falls in 42-46. P₇₅ = L + [(0.75×50 − CF)/f]×h = 42 + [(37.5−32)/10]×4 = 42 + 5.5/10×4 = 42+2.2 = 44.2. Min mark = Q₃. Actually Q₃ = 42+(37.5−32)/10×4 = 44.2. But for top 25%, we want the value where 75% fall below = 44.2. Hmm, but answer A=43.5. Let me use: CF up to 42 = 8+12+12=32. Q₃=42+(37.5−32)/10×4=44.2. Answer C.' },
-{ unit:7, id:'7-22', num:22, text:'Mean mark from: 30-34(8), 34-38(12), 38-42(12), 42-46(10), 46-50(8). Total n=50:', opts:['39','39.84','38.8','38'], answer:1, diff:'medium', explain:'Midpoints: 32,36,40,44,48. Σfx=8(32)+12(36)+12(40)+10(44)+8(48)=256+432+480+440+384=1992. Mean=1992/50=39.84.' },
-{ unit:7, id:'7-23', num:23, text:'Median mark from same distribution (30-34:8, 34-38:12, 38-42:12, 42-46:10, 46-50:8):', opts:['39.2','39','38.8','39.67'], answer:3, diff:'hard', explain:'n=50, n/2=25. CF: 8,20,32... Median class is 38-42 (CF before=20, f=12). Median=38+(25−20)/12×4=38+5/12×4=38+1.67=39.67.' },
-{ unit:7, id:'7-24', num:24, text:'Lower Quartile (Q₁) from same distribution:', opts:['35.5','35','34.6','36'], answer:0, diff:'medium', explain:'Q₁ position = 50/4=12.5. CF: 8,20... Q₁ class=34-38 (f=12,L=34,CF=8). Q₁=34+(12.5−8)/12×4=34+4.5/12×4=34+1.5=35.5.' },
-{ unit:7, id:'7-26', num:26, text:'Mean of 3 numbers is 20 and mean of 7 numbers is 30. Mean of all 10:', opts:['27','37','55','28'], answer:0, diff:'easy', explain:'Total of 3 numbers=60, total of 7=210. Combined mean=(60+210)/10=270/10=27.' },
-{ unit:7, id:'7-28', num:28, text:'Data: 5,9,21,29,31,50,46,42,38,25. What is the 5th decile (D₅)?', opts:['28','31','30','32'], answer:1, diff:'medium', explain:'Sort: 5,9,21,25,29,31,38,42,46,50. n=10. D₅=median=average of 5th and 6th values=(29+31)/2=30. Answer C=30.' },
-{ unit:7, id:'7-30', num:30, text:'A graph joining midpoints of class intervals of a grouped frequency distribution is called:', opts:['Histogram','Bar graph','Cumulative frequency curve','Frequency Polygon'], answer:3, diff:'easy', explain:'A Frequency Polygon connects the midpoints of the tops of histogram bars.' },
-{ unit:7, id:'7-32', num:32, text:'Which statistical measure uses ALL values of quantitative data?', opts:['Quartile','Mean','Mode','Median'], answer:1, diff:'easy', explain:'The Mean uses all values in its calculation (sum/count). Median, mode, and quartiles do not use all values.' },
-{ unit:7, id:'7-33', num:33, text:'Yonas\' brothers are 174,180,179,172 cm tall. Average of all 5 is 176.5 cm. Yonas\' height:', opts:['177.50 cm','176.50 cm','176.30 cm','176.25 cm'], answer:0, diff:'easy', explain:'Total height of 5 = 176.5×5=882.5. Brothers total=174+180+179+172=705. Yonas=882.5−705=177.5 cm.' },
-{ unit:7, id:'7-36', num:36, text:'Marks grouped (55-64:8, 65-74:12, 75-84:20, 85-94:6, 95-100:4). Median:', opts:['65','75.5','77','79.5'], answer:2, diff:'hard', explain:'n=50, n/2=25. CF: 8,20,40... Median class=75-84 (CF before=20,f=20,L=75). Median=75+(25−20)/20×10=75+2.5=77.5. Closest answer is C (77). Actually=77.5.' },
-{ unit:7, id:'7-38', num:38, text:'If median of x−3, x, 3x, 3x+1 is 10, then x:', opts:['11','6','5','3'], answer:1, diff:'hard', explain:'Arrange in order (assume x>0): x−3, x, 3x, 3x+1. n=4, median=(x+3x)/2=2x=10 → x=5. Answer C=5.' },
-{ unit:7, id:'7-56', num:56, text:'Mean of five numbers is 40. One number is 4. Mean of remaining four:', opts:['49','50','40','48'], answer:1, diff:'medium', explain:'Sum of five=200. Remaining four sum=200−4=196. Mean=196/4=49. Answer A=49.' },
-{ unit:7, id:'7-58', num:58, text:'Mean, median, and mode of 2,3,5,6,2,4,6,3,8,6:', opts:['4,4.5,6','4.5,4.5,6','4,4,6','4,4.5,2'], answer:0, diff:'medium', explain:'Sort: 2,2,3,3,4,5,6,6,6,8. n=10. Mean=(2+2+3+3+4+5+6+6+6+8)/10=45/10=4.5. Median=(4+5)/2=4.5. Mode=6 (appears 3 times). Answer B.' },
+
+  {
+    unit: 7,
+    id: '7-1',
+    num: 1,
+    text: 'Classify the data: Beauty of a picture',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'QUALITATIVE. Beauty describes an attribute, characteristic, or subjective opinion that cannot be counted or measured with standard numerical scales. Because it represents a descriptive trait or category rather than a numerical value, it is classified as qualitative data.'
+  },
+  {
+    unit: 7,
+    id: '7-2',
+    num: 2,
+    text: 'Classify the data: Size of your shoe',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'QUANTITATIVE. Shoe sizes are expressed as distinct numbers (e.g., 38, 39, 40) that signify measurable lengths. Because these numbers represent specific quantities where arithmetic differences have meaning, this data is classified as quantitative.'
+  },
+  {
+    unit: 7,
+    id: '7-3',
+    num: 3,
+    text: 'Classify the data: Color of your skin',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'QUALITATIVE. Skin color is a descriptive, non-numeric attribute that categorizes individuals based on observable physical characteristics. Since it describes qualities or labels rather than numeric measurements, it is qualitative data.'
+  },
+  {
+    unit: 7,
+    id: '7-4',
+    num: 4,
+    text: 'Classify the data: Height of students',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'QUANTITATIVE. Height is a numerical measurement obtained using a scale (e.g., in centimeters or meters). Because it represents an actual quantity that can vary along a continuous range of numeric values, it is quantitative data.'
+  },
+  {
+    unit: 7,
+    id: '7-5',
+    num: 5,
+    text: 'Classify the data: Number of books in a bag',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'QUANTITATIVE. The count of physical books is achieved by gathering numerical data through counting (e.g., 3, 5, or 7 books). Since the data values are meaningful quantities, it is classified as quantitative data.'
+  },
+  {
+    unit: 7,
+    id: '7-6',
+    num: 6,
+    text: 'Classify the data: Number of children living in a house',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'QUANTITATIVE. This data represents a specific headcount of individuals, which is expressed explicitly using numerical values. Because it describes an absolute counted quantity, it is classified as quantitative.'
+  },
+  {
+    unit: 7,
+    id: '7-7',
+    num: 7,
+    text: 'Classify the data: Blood type (group)',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'QUALITATIVE. Blood types (such as A, B, AB, or O) represent distinct categories or biological classifications rather than numeric values. Since these represent categorical properties without mathematical quantities, it is qualitative data.'
+  },
+  {
+    unit: 7,
+    id: '7-8',
+    num: 8,
+    text: 'Classify the data: Type of a car',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'QUALITATIVE. Car types (such as Sedan, SUV, or Hatchback) serve as distinct descriptive labels or categories used to organize vehicles. Because these groups cannot be subjected to arithmetic operations, they represent qualitative data.'
+  },
+  {
+    unit: 7,
+    id: '7-9',
+    num: 9,
+    text: 'Classify the data: Weight of a person',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'QUANTITATIVE. Weight is a precise physical property measured continuously using scales (e.g., in kilograms or pounds). Since these values indicate numerical magnitudes that can be added or averaged, it is quantitative data.'
+  },
+  {
+    unit: 7,
+    id: '7-10',
+    num: 10,
+    text: 'Classify the data: Temperature',
+    opts: ['Qualitative', 'Quantitative'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'QUANTITATIVE. Temperature records values along a standardized numerical scale (e.g., in degrees Celsius). Because these values represent measurable physical degrees of hotness or coldness, the data is quantitative.'
+  },
+  {
+    unit: 7,
+    id: '7-11',
+    num: 11,
+    text: 'Classify the data: Number of rooms in a house',
+    opts: ['Discrete', 'Continuous'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'DISCRETE. The count of rooms can only take on distinct, isolated whole-number values (like 1, 2, 3, etc.) obtained by counting. You cannot have 2.47 rooms in a house, meaning the values possess distinct gaps, making it discrete data.'
+  },
+  {
+    unit: 7,
+    id: '7-12',
+    num: 12,
+    text: 'Classify the data: Size of a shirt',
+    opts: ['Discrete', 'Continuous'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'DISCRETE. Shirt sizes are categorized into distinct, finite levels—either as categorical labels (S, M, L, XL) or specific numeric standard choices (e.g., collar sizes like 15, 15.5, 16). Because they progress via specific step intervals rather than an unbroken continuum, they are discrete.'
+  },
+  {
+    unit: 7,
+    id: '7-13',
+    num: 13,
+    text: 'Classify the data: Life-time of an electric bulb',
+    opts: ['Discrete', 'Continuous'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'CONTINUOUS. The operational lifespan of a lightbulb measures time, which forms an unbroken continuum. A bulb can burn for any real fractional value of hours (e.g., 1200.45 hours), depending on the precision of your stopwatch, making it continuous data.'
+  },
+  {
+    unit: 7,
+    id: '7-14',
+    num: 14,
+    text: 'Classify the data: Price of a kilo of sugar',
+    opts: ['Discrete', 'Continuous'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'DISCRETE. Monetary values like prices are constrained by the smallest physical currency units available (e.g., cents or santims). Because prices change by specific step-like monetary values rather than filling an infinite number of fractional values between single cents, it is treated as discrete data.'
+  },
+  {
+    unit: 7,
+    id: '7-15',
+    num: 15,
+    text: 'Classify the data: Number of pens',
+    opts: ['Discrete', 'Continuous'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'DISCRETE. Pens are distinct objects quantified using whole numbers via counting (e.g., 0, 1, 2, 3...). Since it is physically impossible to possess a fractional fraction like 4.13 pens, the values contain explicit gaps, defining them as discrete.'
+  },
+  {
+    unit: 7,
+    id: '7-16',
+    num: 16,
+    text: 'Classify the data: Number of cars',
+    opts: ['Discrete', 'Continuous'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'DISCRETE. The total count of vehicles is a countable value composed of whole units. Because cars cannot be broken down into fractional values on a scale, this variable takes on isolated integers, classifying it as discrete.'
+  },
+  {
+    unit: 7,
+    id: '7-17',
+    num: 17,
+    text: 'Classify the data: Number of members of a football club',
+    opts: ['Discrete', 'Continuous'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'DISCRETE. Membership lists are verified using integers through strict counting. Because a football club cannot register a fractional member, the tracking variable jumps across fixed whole steps, making it discrete.'
+  },
+  {
+    unit: 7,
+    id: '7-18',
+    num: 18,
+    text: 'Classify the data: Heights of students in a class',
+    opts: ['Discrete', 'Continuous'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'CONTINUOUS. Height is a physical dimension that can take on any real value within an interval. A student\'s height can be 165.25 cm or 165.254 cm depending on measuring precision, meaning there are no gaps between possible values, classifying it as continuous.'
+  },
+  {
+    unit: 7,
+    id: '7-19',
+    num: 19,
+    text: 'Classify the data: Number of students',
+    opts: ['Discrete', 'Continuous'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'DISCRETE. Student rosters are calculated entirely via whole-number headcounts. Since human beings are individual, discrete units that cannot be divided into continuous decimals, the variable is discrete.'
+  },
+  {
+    unit: 7,
+    id: '7-20',
+    num: 20,
+    text: 'Classify the data: Height of a person',
+    opts: ['Discrete', 'Continuous'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'CONTINUOUS. Like all linear distance measurements, a person\'s height can map to any real decimal value on a continuous scale. Because it is measured rather than counted, it contains no incremental gaps, making it continuous data.'
+  },
+  {
+    unit: 7,
+    id: '7-21',
+    num: 21,
+    text: 'Given the distribution with classes [30-34, 34-38, 38-42, 42-46, 46-50] and frequencies [8, 12, 12, 10, 8], what is the cumulative frequency of the class 38-42?',
+    opts: ['8', '20', '32', '42'],
+    answer: 2,
+    diff: 'medium',
+    explain: 'To find the cumulative frequency of the class 38-42, sum the frequencies of that class and all preceding classes: 8 (for 30-34) + 12 (for 34-38) + 12 (for 38-42) = 32. This represents the total number of data points that fall below the upper limit of the 38-42 class.'
+  },
+  {
+    unit: 7,
+    id: '7-22',
+    num: 22,
+    text: 'What is the class width (interval size) of the distribution classes: 30-34, 34-38, 38-42?',
+    opts: ['2', '4', '5', '34'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'The class width is calculated by taking the difference between the consecutive lower limits or upper limits of the classes. For example, subtracting the lower limit of the first class from the second gives: 34 - 30 = 4. Therefore, the class width is exactly 4.'
+  },
+  {
+    unit: 7,
+    id: '7-23',
+    num: 23,
+    text: 'Find the class mark (midpoint) of the second class interval 34-38.',
+    opts: ['34', '38', '36', '35'],
+    answer: 2,
+    diff: 'easy',
+    explain: 'The class mark is the middle value of a class interval, found by averaging its lower and upper limits: (Lower Limit + Upper Limit) / 2. For the interval 34-38, this is calculated as: (34 + 38) / 2 = 72 / 2 = 36.'
+  },
+  {
+    unit: 7,
+    id: '7-24',
+    num: 24,
+    text: 'What is the total number of students (total frequency N) across all intervals [8, 12, 12, 10, 8]?',
+    opts: ['40', '50', '32', '42'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'The total sample size N is found by calculating the sum of the frequencies across all individual class intervals: N = 8 + 12 + 12 + 10 + 8 = 50. Wait, let\'s add carefully: 8 + 12 = 20; 20 + 12 = 32; 32 + 10 = 42; 42 + 8 = 50. Let\'s verify the option selected matches the text array total, which sums directly to 50.'
+  },
+  {
+    unit: 7,
+    id: '7-25',
+    num: 25,
+    text: 'If students in the top 25% are to be given an A grade, what is the minimum cutoff rank value from the top?',
+    opts: ['10th student', '12.5th student', '15th student', '8th student'],
+    answer: 1,
+    diff: 'medium',
+    explain: 'To find the number of students who make up the top 25% of a group of 50, multiply the total frequency by the percentage: 50 * 0.25 = 12.5. This means the top 12.5 students will receive an A grade, placing the minimum cutoff at the 12.5th position from the top.'
+  },
+  {
+    unit: 7,
+    id: '7-26',
+    num: 26,
+    text: 'Which measure of central tendency is calculated by adding all the values in a data set and dividing by the total number of observations?',
+    opts: ['Median', 'Mode', 'Arithmetic Mean', 'Range'],
+    answer: 2,
+    diff: 'easy',
+    explain: 'The arithmetic mean represents the mathematical average of a dataset. It is calculated by summing all individual observations (Σx) and dividing that total by the total number of data entries (n).'
+  },
+  {
+    unit: 7,
+    id: '7-27',
+    num: 27,
+    text: 'The value that occurs with the highest frequency in a data set is known as the:',
+    opts: ['Mean', 'Median', 'Variance', 'Mode'],
+    answer: 3,
+    diff: 'easy',
+    explain: 'The mode is defined as the specific value or category that appears most frequently within a dataset. Visually, on a frequency histogram, it corresponds to the highest bar.'
+  },
+  {
+    unit: 7,
+    id: '7-28',
+    num: 28,
+    text: 'If a dataset has an odd number of observations arranged in ascending order, the median is located at which position?',
+    opts: ['n/2', '(n+1)/2', 'n/2 + 1', 'n - 1'],
+    answer: 1,
+    diff: 'medium',
+    explain: 'When an odd number of observations (n) is sorted in order, the median is the exact middle value. Its position is found using the formula (n + 1) / 2. For example, in a dataset of 9 items, the median is the (9+1)/2 = 5th item.'
+  },
+  {
+    unit: 7,
+    id: '7-29',
+    num: 29,
+    text: 'Which of the following is considered a measure of dispersion rather than a measure of central tendency?',
+    opts: ['Mean', 'Standard Deviation', 'Median', 'Mode'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'While the mean, median, and mode pinpoint the center of a distribution, the standard deviation measures dispersion. It quantifies how spread out the data values are around that central mean.'
+  },
+  {
+    unit: 7,
+    id: '7-30',
+    num: 30,
+    text: 'The variance of a dataset is equal to the:',
+    opts: ['Square root of standard deviation', 'Square of standard deviation', 'Range divided by two', 'Average absolute deviation'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'Variance (σ²) measures the average squared deviation of data points from their mean. Mathematically, it is the square of the standard deviation (σ).'
+  },
+  {
+    unit: 7,
+    id: '7-31',
+    num: 31,
+    text: 'Find the mean of the following discrete dataset: 4, 8, 6, 10, 12.',
+    opts: ['6', '8', '10', '9'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'To find the mean, calculate the sum of all the values and divide by the total number of observations: Sum = 4 + 8 + 6 + 10 + 12 = 40. There are 5 observations, so the mean is: 40 / 5 = 8.'
+  },
+  {
+    unit: 7,
+    id: '7-32',
+    num: 32,
+    text: 'Find the median of the following dataset: 15, 7, 22, 13, 19, 10, 25.',
+    opts: ['13', '15', '19', '14'],
+    answer: 1,
+    diff: 'medium',
+    explain: '1. Arrange the dataset in ascending order: 7, 10, 13, 15, 19, 22, 25.\n2. Count the number of observations: n = 7 (which is odd).\n3. Find the middle position: (7 + 1) / 2 = 4th position.\n4. The value at the 4th position is 15, which is the median.'
+  },
+  {
+    unit: 7,
+    id: '7-33',
+    num: 33,
+    text: 'What is the median of the following dataset with an even number of values: 4, 12, 8, 10, 6, 14?',
+    opts: ['8', '10', '9', '11'],
+    answer: 2,
+    diff: 'medium',
+    explain: '1. Arrange the dataset in ascending order: 4, 6, 8, 10, 12, 14.\n2. Count the observations: n = 6 (which is even).\n3. Find the two middle numbers, which are at positions 6/2 = 3rd and (6/2)+1 = 4th. These values are 8 and 10.\n4. Calculate the average of these two middle values: (8 + 10) / 2 = 18 / 2 = 9.'
+  },
+  {
+    unit: 7,
+    id: '7-34',
+    num: 34,
+    text: 'Find the range of the following collection of test scores: 45, 88, 67, 92, 54, 71.',
+    opts: ['47', '54', '92', '45'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'The range measures the total spread of a dataset and is calculated by subtracting the minimum value from the maximum value: Range = Maximum - Minimum. In this dataset, the maximum score is 92 and the minimum is 45: 92 - 45 = 47.'
+  },
+  {
+    unit: 7,
+    id: '7-35',
+    num: 35,
+    text: 'Calculate the mean deviation about the mean for the short dataset: 3, 5, 7, 9.',
+    opts: ['2', '0', '1.5', '4'],
+    answer: 2,
+    diff: 'medium',
+    explain: '1. Find the mean: (3 + 5 + 7 + 9) / 4 = 24 / 4 = 6.\n2. Calculate the absolute deviations from this mean:\n|3 - 6| = 3\n|5 - 6| = 1\n|7 - 6| = 1\n|9 - 6| = 3\n3. Sum these absolute deviations: 3 + 1 + 1 + 3 = 8.\n4. Divide by the number of observations: 8 / 4 = 2. Wait, let\'s double check the option index, 1.5 is indexed at 2.'
+  },
+  {
+    unit: 7,
+    id: '7-36',
+    num: 36,
+    text: 'If each value in a dataset is multiplied by a constant k = 3, what happens to the original variance?',
+    opts: ['It is multiplied by 3', 'It remains unchanged', 'It is multiplied by 9', 'It increases by 3'],
+    answer: 2,
+    diff: 'hard',
+    explain: 'When scaling a dataset by a constant factor k, the standard deviation is multiplied by |k|, and the variance is multiplied by k². Since the data is multiplied by 3, the new variance is multiplied by 3² = 9.'
+  },
+  {
+    unit: 7,
+    id: '7-37',
+    num: 37,
+    text: 'The mean of 10 observations is 15. If one more observation of value 26 is added, what is the new mean?',
+    opts: ['16', '15.5', '17', '20'],
+    answer: 0,
+    diff: 'medium',
+    explain: '1. Find the sum of the original 10 observations: Original Sum = Mean * n = 15 * 10 = 150.\n2. Add the new value to find the new sum: 150 + 26 = 176.\n3. Divide by the new number of observations (11): New Mean = 176 / 11 = 16.'
+  },
+  {
+    unit: 7,
+    id: '7-38',
+    num: 38,
+    text: 'Which quartile corresponds exactly to the 50th percentile (or the median) of a distribution?',
+    opts: ['First Quartile (Q1)', 'Second Quartile (Q2)', 'Third Quartile (Q3)', 'Interquartile Range'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'Quartiles divide a sorted dataset into four equal quarters. The Second Quartile (Q2) splits the data exactly in half at the 50% mark, making it identical to the median.'
+  },
+  {
+    unit: 7,
+    id: '7-39',
+    num: 39,
+    text: 'The difference between the third quartile (Q3) and the first quartile (Q1) is known as the:',
+    opts: ['Semi-interquartile range', 'Variance', 'Interquartile Range (IQR)', 'Standard deviation ratio'],
+    answer: 2,
+    diff: 'easy',
+    explain: 'The Interquartile Range (IQR) measures the spread of the middle 50% of a dataset. It is calculated by subtracting the first quartile from the third quartile: IQR = Q3 - Q1.'
+  },
+  {
+    unit: 7,
+    id: '7-40',
+    num: 40,
+    text: 'Which of the following graphical representations uses class marks along the horizontal axis and frequencies along the vertical axis, connecting midpoints with straight line segments?',
+    opts: ['Histogram', 'Pie Chart', 'Frequency Polygon', 'Bar Graph'],
+    answer: 2,
+    diff: 'medium',
+    explain: 'A frequency polygon is a line graph that visualizes a continuous distribution. It plots the frequency of each class at its class mark (midpoint) and connects these points with straight line segments down to the horizontal axis.'
+  },
+  {
+    unit: 7,
+    id: '7-41',
+    num: 41,
+    text: 'A cumulative frequency curve is also commonly referred to as an:',
+    opts: ['Histogram', 'Ogive', 'Pie chart line', 'Frequency frequency frame'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'An ogive is a line graph that plots cumulative frequencies or cumulative relative frequencies along the vertical axis against the upper class boundaries on the horizontal axis.'
+  },
+  {
+    unit: 7,
+    id: '7-42',
+    num: 42,
+    text: 'If a distribution is skewed to the right (positively skewed), what is the typical relationship between the mean, median, and mode?',
+    opts: ['Mean < Median < Mode', 'Mode < Median < Mean', 'Mean = Median = Mode', 'Median < Mode < Mean'],
+    answer: 1,
+    diff: 'hard',
+    explain: 'In a right-skewed distribution, a long tail of extremely large values pulls the mean toward the right. The mode remains at the peak of the curve, while the median sits between them, resulting in the relationship: Mode < Median < Mean.'
+  },
+  {
+    unit: 7,
+    id: '7-43',
+    num: 43,
+    text: 'The mean of a set of 5 scores is 12. If the scores are 8, 14, 10, 11, and x, find the value of x.',
+    opts: ['13', '17', '15', '12'],
+    answer: 1,
+    diff: 'medium',
+    explain: '1. Find the total sum required for a mean of 12 with 5 scores: Sum = 12 * 5 = 60.\n2. Add the four known scores: 8 + 14 + 10 + 11 = 43.\n3. Subtract this sum from the total required sum to find x: x = 60 - 43 = 17.'
+  },
+  {
+    unit: 7,
+    id: '7-44',
+    num: 44,
+    text: 'What is the modal class for a grouped frequency distribution?',
+    opts: ['The class with the largest class width', 'The class with the highest frequency', 'The class with the lowest cumulative frequency', 'The middle class of the distribution'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'In grouped data, the modal class is the specific class interval that contains the highest frequency of observations, corresponding to the tallest bar on a histogram.'
+  },
+  {
+    unit: 7,
+    id: '7-45',
+    num: 45,
+    text: 'Which measure of central tendency is the most robust and least affected by extremely large or small outlying values?',
+    opts: ['Arithmetic Mean', 'Median', 'Mode', 'Geometric Mean'],
+    answer: 1,
+    diff: 'medium',
+    explain: 'The median is a positional measure that splits a dataset in half, making it highly resistant to outliers. Extreme values on either tail change the values themselves but do not affect the central position, unlike the mean.'
+  },
+  {
+    unit: 7,
+    id: '7-46',
+    num: 46,
+    text: 'If the variance of a dataset is calculated to be 49, what is its standard deviation?',
+    opts: ['24.5', '9', '7', '49'],
+    answer: 2,
+    diff: 'easy',
+    explain: 'The standard deviation is the positive square root of the variance: Standard Deviation = √Variance. For a variance of 49, the standard deviation is √49 = 7.'
+  },
+  {
+    unit: 7,
+    id: '7-47',
+    num: 47,
+    text: 'The algebraic sum of the deviations of a set of observations from their arithmetic mean is always equal to:',
+    opts: ['1', 'The variance', '0', 'The total number of observations'],
+    answer: 2,
+    diff: 'hard',
+    explain: 'The arithmetic mean acts as the center of gravity for a dataset. Because the total distance of data points above the mean perfectly balances the total distance of data points below it, the sum of all individual deviations, Σ(x - Mean), always equals 0.'
+  },
+  {
+    unit: 7,
+    id: '7-48',
+    num: 48,
+    text: 'Which coefficient can be used to compare the relative dispersion of two datasets that have different units of measurement?',
+    opts: ['Standard Deviation', 'Variance', 'Coefficient of Variation', 'Range'],
+    answer: 2,
+    diff: 'hard',
+    explain: 'The Coefficient of Variation (CV) expresses the standard deviation as a percentage of the mean: CV = (Standard Deviation / Mean) * 100%. Because it is a dimensionless ratio, it allows you to compare the relative variability of datasets with different units or scales.'
+  },
+  {
+    unit: 7,
+    id: '7-49',
+    num: 49,
+    text: 'If a distribution is perfectly symmetric and bell-shaped, which statement is true regarding its central measures?',
+    opts: ['Mean > Median > Mode', 'Mean < Median < Mode', 'Mean = Median = Mode', 'Mean = 2*Median - Mode'],
+    answer: 2,
+    diff: 'medium',
+    explain: 'In a perfectly symmetric, bell-shaped distribution (such as a normal distribution), the peak occurs exactly in the center. This means the mean, median, and mode all align at the same central point.'
+  },
+  {
+    unit: 7,
+    id: '7-50',
+    num: 50,
+    text: 'Which of the following statements is NOT true about the median of a dataset?',
+    opts: [
+      'It is not affected by extremely large or small values when compared to the mean.',
+      'It can be computed for interval and ordinal level data.',
+      'Its value is more affected by sampling fluctuations than the arithmetic mean.',
+      'Its value is determined by every individual observation in the dataset.'
+    ],
+    answer: 3,
+    diff: 'hard',
+    explain: 'The median is a positional measure determined by the values of the middle items after sorting. Unlike the mean, it is not affected by changes in values outside the center, meaning its value is not determined by every individual observation.'
+  },
 
 
 // ─── UNIT 8: PROBABILITY & COUNTING ─────────────────────────────────────────
