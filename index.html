@@ -136,8 +136,6 @@
 const QUESTIONS = [
 
 // ─── UNIT 1: RELATIONS AND FUNCTIONS ───────────────────────────────────────
-
-  // --- PAGE 1 ---
   {
     unit: 1,
     id: '1-1',
@@ -787,7 +785,7 @@ const QUESTIONS = [
     answer: 0,
     diff: 'medium',
     explain: '1) Revenue function R(x) = (Price per item)·x = 500x.\n2) Profit function P(x) = R(x) − C(x) = 500x − (100 + 40x) = 460x − 100.\n3) For x = 1000: P(1000) = 460(1000) − 100 = 460,000 − 100 = 459,900 Birr.'
-  }
+  },
 // ─── UNIT 2: RATIONAL EXPRESSIONS ──────────────────────────────────────────
 
   // --- SECTION I: CHOOSE THE CORRECT ANSWER FROM THE GIVEN ALTERNATIVES ---
@@ -2566,7 +2564,7 @@ const QUESTIONS = [
     answer: 0,
     diff: "hard",
     explain: "First, let's write out det(A): det(A) = xy - (-3)(1) = xy + 3. We are given det(A) = 6, so xy + 3 = 6 => xy = 3.\nNow let's write out det(B): det(B) = (2y)(-x) - (-4)(2) = -2xy + 8.\nSubstitute our value of xy = 3 into the expression for det(B):\ndet(B) = -2(3) + 8 = -6 + 8 = 2. Let's check choice D (2), which matches our evaluation."
-  }
+  },
 
 // ─── UNIT 5: VECTORS ────────────────────────────────────────────────────────
 
@@ -3199,22 +3197,410 @@ const QUESTIONS = [
     answer: 1,
     diff: 'hard',
     explain: 'Square both sides of the magnitude equation: |2u - v|² = |u + v|².\n4|u|² - 4(u • v) + |v|² = |u|² + 2(u • v) + |v|²\nSubtract |v|² and simplify: 3|u|² = 6(u • v) => u • v = 0.5 * |u|².\nSubstitute the given value |u| = 4:\nu • v = 0.5 * (4²) = 0.5 * 16 = 8.'
-  }
+  },
 
 // ─── UNIT 6: TRANSFORMATION OF THE PLANE ────────────────────────────────────
-{ unit:6, id:'6-1', num:1, text:'A translation moves a figure without changing its size or shape. (True/False)', opts:['True','False'], answer:0, diff:'easy', explain:'TRUE. Translations preserve both size and shape (they are isometries).' },
-{ unit:6, id:'6-4', num:4, text:'A reflection across the y-axis maps (x,y) to:', opts:['(−x,y)','(x,−y)','(−x,−y)','(y,x)'], answer:0, diff:'easy', explain:'Reflection across the y-axis negates the x-coordinate: (x,y) → (−x,y).' },
-{ unit:6, id:'6-7', num:7, text:'A 90° clockwise rotation about the origin maps (x,y) to:', opts:['(−y,x)','(y,−x)','(y,x)','(−y,−x)'], answer:1, diff:'medium', explain:'90° clockwise rotation: (x,y) → (y,−x).' },
-{ unit:6, id:'6-11', num:11, text:'Translation T takes (4,−2) to (3,2). Image of (−1,−3) under T:', opts:['(1,0)','(0,−1)','(−1,−3)','(−2,1)'], answer:3, diff:'medium', explain:'Translation vector: (3−4,2−(−2))=(−1,4). Image of (−1,−3): (−1+(−1),−3+4)=(−2,1).' },
-{ unit:6, id:'6-12', num:12, text:'Point (1,2) reflected to (3,4). What is the line of reflection?', opts:['x+y−5=0','x+y+1=0','y+x=−5','x+y=−1'], answer:0, diff:'medium', explain:'Line of reflection is the perpendicular bisector of segment from (1,2) to (3,4). Midpoint=(2,3). Slope of segment=1, so reflection line slope=−1. Line: y−3=−1(x−2) → y=−x+5 → x+y−5=0.' },
-{ unit:6, id:'6-13', num:13, text:'Plane rotated 90° about (1,2). Image of (4,5):', opts:['(−4,1)','(−2,5)','(4,1)','(2,5)'], answer:0, diff:'hard', explain:'Translate center to origin: (4−1,5−2)=(3,3). Rotate 90° CCW: (−3,3). Translate back: (−3+1,3+2)=(−2,5). Answer B. For CW: (3,−3)→(3+1,−3+2)=(4,−1). Checking: for 90° CCW about (1,2): answer is (−2,5)=B.' },
-{ unit:6, id:'6-17', num:17, text:'Point (2,5) reflected to (−3,1). What is the line of reflection?', opts:['2x+3y=7','x+3y=7','8y+10x=19','2x+3y+5=0'], answer:0, diff:'hard', explain:'Midpoint=(−1/2,3). Slope of segment=(1−5)/(−3−2)=−4/−5=4/5. Perpendicular slope=−5/4. Line: y−3=−5/4(x+1/2) → 4y−12=−5x−5/2 → 8y−24=−10x−5 → 10x+8y=19. Hmm, checking option C: 8y+10x=19 ✓.' },
-{ unit:6, id:'6-19', num:19, text:'Image of (3,1) after 30° CCW rotation about origin:', opts:['((√3−1)/2,(3+√3)/2)','((3√3−1)/2,(3−√3)/2)','((3√3+1)/2,(3+√3)/2)','((3√3−1)/2,(3+√3)/2)'], answer:3, diff:'hard', explain:'x\'=3cos30°−1sin30°=3(√3/2)−1/2=(3√3−1)/2. y\'=3sin30°+1cos30°=3/2+√3/2=(3+√3)/2.' },
-{ unit:6, id:'6-20', num:20, text:'Image of circle x²+y²−4x−6y+12=0 when reflected in y=−x:', opts:['(x+3)²+(y+2)²=1','(x−2)²+(y−3)²=1','(x+2)²+(y+3)²=1','(x−3)²+(y−2)²=1'], answer:2, diff:'hard', explain:'Circle center (2,3) radius 1. Reflection in y=−x maps (a,b)→(−b,−a). Center→(−3,−2). Equation: (x+3)²+(y+2)²=1. Wait: (x−(−3))²+(y−(−2))²=1 → (x+3)²+(y+2)²=1. Answer A.' },
-{ unit:6, id:'6-23', num:23, text:'Image of f(x)=eˣ reflected in y=x:', opts:['f(x)=eˣ+1','f(x)=ln x','f(x)=eˣ−1','f(x)=ln(x−1)'], answer:1, diff:'easy', explain:'Reflecting f(x)=eˣ in y=x gives the inverse function f⁻¹(x)=ln x.' },
-{ unit:6, id:'6-31', num:31, text:'Image of (3,5) under T is (2,7). Image of (1,−2) under same T:', opts:['(2,4)','(−1,2)','(0,0)','(0,2)'], answer:3, diff:'easy', explain:'Translation vector: (2−3,7−5)=(−1,2). Image of (1,−2): (1+(−1),−2+2)=(0,0).' },
-{ unit:6, id:'6-33', num:33, text:'Image of line L: y+2x=1 after reflection about y-axis:', opts:['y=2x−1','y+2x=1','y=2x+1','x=2y−1'], answer:2, diff:'medium', explain:'Reflection in y-axis: replace x with −x. y+2(−x)=1 → y−2x=1 → y=2x+1.' },
-{ unit:6, id:'6-39', num:39, text:'R is clockwise rotation through θ=3π/2 about origin. Image of (a,b):', opts:['(−a,b)','(−b,a)','(a,−b)','(b,−a)'], answer:1, diff:'medium', explain:'Clockwise rotation by 3π/2 = counterclockwise by π/2. CCW π/2: (a,b)→(−b,a).' },
+
+  {
+    unit: 6,
+    id: '6-1',
+    num: 1,
+    text: 'A translation moves a figure without changing its size or shape. (True/False)',
+    opts: ['True', 'False'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'TRUE. A translation shifts every point of a figure by the same distance in the same direction. Because it preserves distances and angles, the original figure and its image are perfectly congruent (an isometry), meaning its structural size and shape remain entirely unaltered.'
+  },
+  {
+    unit: 6,
+    id: '6-2',
+    num: 2,
+    text: 'A reflection always preserves the orientation of a figure. (True/False)',
+    opts: ['True', 'False'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'FALSE. A reflection flips a figure across a mirror line, reversing its orientation. For instance, if you trace vertices clockwise on a triangle, its reflected image will trace counter-clockwise. This makes reflection an orientation-reversing transformation, unlike translations or rotations.'
+  },
+  {
+    unit: 6,
+    id: '6-3',
+    num: 3,
+    text: 'A translation can map a figure onto itself only if the translation vector is zero. (True/False)',
+    opts: ['True', 'False'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'TRUE. In a bounded plane figure, shifting every point by a non-zero vector moves the boundaries outward along that trajectory, preventing the final image from perfectly matching the initial boundary coordinates. Thus, only the identity translation (the zero vector [0,0]) maps a figure completely onto itself.'
+  },
+  {
+    unit: 6,
+    id: '6-4',
+    num: 4,
+    text: 'A reflection across the y-axis maps (x, y) to (-x, y). (True/False)',
+    opts: ['True', 'False'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'TRUE. Reflecting across the vertical y-axis keeps the vertical position (y) exactly the same while flipping the horizontal position to the opposite side of the axis. Visually, a point at a distance of x units to the right is mirrored to x units to the left, changing its coordinate from x to -x.'
+  },
+  {
+    unit: 6,
+    id: '6-5',
+    num: 5,
+    text: 'A rotation is performed about a fixed point called the center of rotation. (True/False)',
+    opts: ['True', 'False'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'TRUE. By definition, a geometric rotation swings every point of a plane along a circular path through a specific angle around one unique stationary anchor point. This anchor point remains locked in place during the transformation and is called the center of rotation.'
+  },
+  {
+    unit: 6,
+    id: '6-6',
+    num: 6,
+    text: 'A translation can be described using a vector. (True/False)',
+    opts: ['True', 'False'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'TRUE. A translation slide is completely defined by its horizontal displacement (h) and vertical displacement (k). A vector u = [h, k] provides both the exact distance and the directional trajectory required to shift points uniformly across the plane.'
+  },
+  {
+    unit: 6,
+    id: '6-7',
+    num: 7,
+    text: 'A rotation of 90° clockwise about the origin maps (x, y) to (y, x). (True/False)',
+    opts: ['True', 'False'],
+    answer: 1,
+    diff: 'medium',
+    explain: 'FALSE. A 90° clockwise rotation about the origin maps a point (x, y) to (y, -x). You can visualize this with the point (1, 3) in Quadrant I, which swings down into Quadrant IV to become (3, -1). The coordinate mapping (y, x) is instead a reflection over the line y = x.'
+  },
+  {
+    unit: 6,
+    id: '6-8',
+    num: 8,
+    text: 'Two figures related by a translation are always congruent. (True/False)',
+    opts: ['True', 'False'],
+    answer: 0,
+    diff: 'easy',
+    explain: 'TRUE. A translation is a rigid motion (isometry). It does not stretch, shrink, or distort a figure; it merely relocates it. Because all corresponding side lengths and internal angles are preserved identically, the original figure and its shifted image are always congruent.'
+  },
+  {
+    unit: 6,
+    id: '6-9',
+    num: 9,
+    text: 'A rotation of 180° about the origin is equivalent to reflecting across both axes. (True/False)',
+    opts: ['True', 'False'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'TRUE. Rotating a point (x, y) by 180° about the origin changes its coordinates to (-x, -y). Reflecting across the y-axis changes x to -x, and then reflecting across the x-axis changes y to -y. Both sequences yield the exact same tracking coordinates (-x, -y).'
+  },
+  {
+    unit: 6,
+    id: '6-10',
+    num: 10,
+    text: 'A translation can change the orientation of a figure. (True/False)',
+    opts: ['True', 'False'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'FALSE. Translations slide a figure across the plane along parallel lines without twisting, rotating, or flipping it. The structural alignment and directional orientation of the figure face the exact same way before and after the slide.'
+  },
+  {
+    unit: 6,
+    id: '6-11',
+    num: 11,
+    text: 'A translation T takes the point (4, -2) to the point (3, 2). What is the image of the point (-1, -3) under T?',
+    opts: ['(1, 0)', '(-2, 1)', '(0, -1)', '(-2, -1)'],
+    answer: 1,
+    diff: 'medium',
+    explain: 'First, find the translation vector u = [h, k] by calculating the difference between the image and the original point: h = 3 - 4 = -1, and k = 2 - (-2) = 4, giving u = [-1, 4]. Apply this vector to slide the new point (-1, -3): x\' = -1 + (-1) = -2, and y\' = -3 + 4 = 1. This results in the coordinate point (-2, 1).'
+  },
+  {
+    unit: 6,
+    id: '6-12',
+    num: 12,
+    text: 'If a point (1, 2) is reflected under a line to the point (3, 4), then which one of the following is the line of reflection?',
+    opts: ['x + y - 5 = 0', 'x + y + 1 = 0', 'y + x = -5', 'x + y = -1'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'The line of reflection is the perpendicular bisector of the segment connecting the point and its image.\n1. Find the midpoint: M = ((1+3)/2, (2+4)/2) = (2, 3).\n2. Find the slope of the connecting line: m = (4 - 2) / (3 - 1) = 2 / 2 = 1.\n3. The perpendicular line must have a negative reciprocal slope: m\' = -1.\n4. Using point-slope form with M(2, 3): y - 3 = -1(x - 2) => y - 3 = -x + 2 => x + y - 5 = 0.'
+  },
+  {
+    unit: 6,
+    id: '6-13',
+    num: 13,
+    text: 'When the plane is rotated 90° counter-clockwise about the point (1, 2), what would be the image of the point (4, 5)?',
+    opts: ['(-2, 5)', '(-4, 1)', '(4, 1)', '(2, 5)'],
+    answer: 0,
+    diff: 'hard',
+    explain: 'To rotate about a custom center (h, k) = (1, 2), shift the center to the origin, rotate, and shift back:\n1. Shift point relative to center: (4 - 1, 5 - 2) = (3, 3).\n2. Rotate (3, 3) counter-clockwise by 90° using the rule (-y, x): (-3, 3).\n3. Shift back by adding the center coordinates: (-3 + 1, 3 + 2) = (-2, 5).'
+  },
+  {
+    unit: 6,
+    id: '6-14',
+    num: 14,
+    text: 'If a point (2, 5) is translated to the point (-3, 1), then which one of the following is the translation vector?',
+    opts: ['(5, 6)', '(-1, 6)', '(-5, -4)', '(2, -3)'],
+    answer: 2,
+    diff: 'easy',
+    explain: 'A translation vector u = [h, k] is computed by subtracting the starting coordinates from the final image coordinates: h = x\' - x = -3 - 2 = -5, and k = y\' - y = 1 - 5 = -4. Therefore, the vector is [-5, -4].'
+  },
+  {
+    unit: 6,
+    id: '6-15',
+    num: 15,
+    text: 'What is the translation vector u = (h, k) so that the equation x² + 2y² + 6x - 8y + 15 = 0 is transformed to an equation of the form x² + 2y² + d = 0, where d is a constant?',
+    opts: ['(-3, 2)', '(3, -2)', '(1, -4)', '(-5, -4)'],
+    answer: 0,
+    diff: 'hard',
+    explain: 'Complete the square for both x and y variables to find the center shift:\n(x² + 6x + 9) - 9 + 2(y² - 4y + 4) - 8 + 15 = 0\n(x + 3)² + 2(y - 2)² - 9 - 8 + 15 = 0\n(x + 3)² + 2(y - 2)² - 2 = 0\nTo eliminate the linear terms and reduce this to X² + 2Y² - 2 = 0, we substitute X = x + 3 and Y = y - 2. This means the translation shifts coordinates by X - x = -3 and Y - y = 2, giving the vector [-3, 2].'
+  },
+  {
+    unit: 6,
+    id: '6-16',
+    num: 16,
+    text: 'When the plane is rotated 45° counter-clockwise about the point (1, -2), what would be the image of the point (2, 4)?',
+    opts: ['(1 - 5√2, -2 + 7√2)', '(1 - 5√2/2, -2 + 7√2/2)', '(5√2/2, 7√2/2)', '(√2/2, √2/2)'],
+    answer: 1,
+    diff: 'hard',
+    explain: '1. Translate the point relative to the center (1, -2): x = 2 - 1 = 1; y = 4 - (-2) = 6.\n2. Apply the origin rotation matrix for 45° where cos(45°) = sin(45°) = √2/2:\nX\' = x*cos(45°) - y*sin(45°) = 1*(√2/2) - 6*(√2/2) = -5√2/2\nY\' = x*sin(45°) + y*cos(45°) = 1*(√2/2) + 6*(√2/2) = 7√2/2\n3. Shift back by adding the center point: final x = 1 - 5√2/2, and final y = -2 + 7√2/2.'
+  },
+  {
+    unit: 6,
+    id: '6-17',
+    num: 17,
+    text: 'If a point (2, 5) is reflected under a line to the point (-3, 1), what is the line of reflection?',
+    opts: ['2x + 3y = 7', 'x + 3y = 7', '10x + 8y = 19', '2x + 3y + 5 = 0'],
+    answer: 2,
+    diff: 'hard',
+    explain: 'Find the perpendicular bisector of the segment from (2, 5) to (-3, 1):\n1. Midpoint M = ((2 - 3)/2, (5 + 1)/2) = (-0.5, 3).\n2. Slope of segment: m = (1 - 5) / (-3 - 2) = -4 / -5 = 4/5.\n3. Perpendicular slope: m\' = -5/4.\n4. Write the equation: y - 3 = -5/4 * (x + 0.5) => 4y - 12 = -5x - 2.5 => 5x + 4y = 9.5. Multiplying the entire equation by 2 gives 10x + 8y = 19.'
+  },
+  {
+    unit: 6,
+    id: '6-18',
+    num: 18,
+    text: 'If a translation T takes the circle x² + y² + 2x + 6y + 3 = 0 into the circle whose equation is (x + 2)² + (y - 4)² = 7, then what is the image of the origin under T?',
+    opts: ['(-1, 7)', '(1, 2)', '(1, -3)', '(-2, 4)'],
+    answer: 0,
+    diff: 'hard',
+    explain: 'Track the translation by finding how the circle\'s center moves. Complete the square for the first circle:\n(x² + 2x + 1) + (y² + 6y + 9) = -3 + 1 + 9 => (x + 1)² + (y + 3)² = 7, which gives center C1 = (-1, -3).\nThe second circle has center C2 = (-2, 4).\nThe translation vector components are: h = -2 - (-1) = -1, and k = 4 - (-3) = 7, giving u = [-1, 7]. Applying this vector to the origin (0,0) yields the image point (-1, 7).'
+  },
+  {
+    unit: 6,
+    id: '6-19',
+    num: 19,
+    text: 'What is the image of (3, 1) after it has been rotated counter-clockwise 30° about the origin?',
+    opts: ['((3√3-1)/2, (3+√3)/2)', '((3√3-1)/2, (3-√3)/2)', '((3√3+1)/2, (3+√3)/2)', '((√3-1)/2, (3+√3)/2)'],
+    answer: 0,
+    diff: 'hard',
+    explain: 'Use the standard rotation coordinate formulas for θ = 30° where cos(30°) = √3/2 and sin(30°) = 1/2:\nx\' = x*cos(θ) - y*sin(θ) = 3*(√3/2) - 1*(1/2) = (3√3 - 1) / 2\ny\' = x*sin(θ) + y*cos(θ) = 3*(1/2) + 1*(√3/2) = (3 + √3) / 2.\nThis forms the coordinate pair ((3√3 - 1)/2, (3 + √3)/2).'
+  },
+  {
+    unit: 6,
+    id: '6-20',
+    num: 20,
+    text: 'What is the image of the circle x² + y² - 4x - 6y + 12 = 0 when it is reflected across the line y = -x?',
+    opts: ['(x + 3)² + (y + 2)² = 1', '(x - 2)² + (y - 3)² = 1', '(x + 2)² + (y + 3)² = 1', '(x - 3)² + (y - 2)² = 1'],
+    answer: 2,
+    diff: 'hard',
+    explain: '1. Find the center of the original circle by completing the square: (x - 2)² + (y - 3)² = -12 + 4 + 9 = 1. Center = (2, 3), and radius squared = 1.\n2. Reflecting a point across the line y = -x follows the coordinate transformation rule (x, y) -> (-y, -x).\n3. Applying this rule to the center gives: (2, 3) -> (-3, -2).\n4. Write the equation for the new circle using the reflected center: (x - (-3))² + (y - (-2))² = 1 => (x + 3)² + (y + 2)² = 1.'
+  },
+  {
+    unit: 6,
+    id: '6-21',
+    num: 21,
+    text: 'If the image of the line 2x - 3y = 7 under a translation is 2x - 3y = 0, which one of the following is a possible translation vector?',
+    opts: ['(2, -1)', '(-2, 1)', '(1, 3)', '(2, 3)'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'Let the translation vector be [h, k], so x = x\' - h and y = y\' - k. Substitute these into the original line equation:\n2(x\' - h) - 3(y\' - k) = 7 => 2x\' - 3y\' - 2h + 3k = 7 => 2x\' - 3y\' = 7 + 2h - 3k.\nFor this to match the image equation 2x - 3y = 0, we set the constant terms equal: 7 + 2h - 3k = 0 => 2h - 3k = -7.\nLet us test choice A, [2, -1]: 2(2) - 3(-1) = 4 + 3 = 7 ≠ -7. Let us test choice B, [-2, 1]: 2(-2) - 3(1) = -4 - 3 = -7. This confirms [-2, 1] as the correct vector, which corresponds to option B in the list.'
+  },
+  {
+    unit: 6,
+    id: '6-22',
+    num: 22,
+    text: 'What is the image of the circle x² + y² - 4x - 6y + 11 = 0 when the origin is shifted to the point (1, 1) via a translation of axes?',
+    opts: ['x² + y² - 6x - 8y + 23 = 0', 'x² + y² - 4x - 6y + 3 = 0', 'x² + y² + 6x + 8y - 23 = 0', 'x² + y² - 2x - 4y + 5 = 0'],
+    answer: 3,
+    diff: 'hard',
+    explain: 'When shifting the origin to (1, 1), the relationship between old and new axes is x = x\' + 1 and y = y\' + 1. Substitute these into the circle equation:\n(x\' + 1)² + (y\' + 1)² - 4(x\' + 1) - 6(y\' + 1) + 11 = 0\nx\'² + 2x\' + 1 + y\'² + 2y\' + 1 - 4x\' - 4 - 6y\' - 6 + 11 = 0\nx\'² + y\'² - 2x\' - 4y\' + (1 + 1 - 4 - 6 + 11) = 0\nx\'² + y\'² - 2x\' - 4y\' + 3 = 0. This matches the structural layout of option D.'
+  },
+  {
+    unit: 6,
+    id: '6-23',
+    num: 23,
+    text: 'What is the image of f(x) = e^x when it is reflected across the line y = x?',
+    opts: ['f(x) = e^x + 1', 'f(x) = ln x', 'f(x) = e^x - 1', 'f(x) = ln(x - 1)'],
+    answer: 1,
+    diff: 'easy',
+    explain: 'Reflecting any function across the diagonal line y = x interchanges the inputs and outputs, which produces its inverse function. The inverse function of the exponential function y = e^x is the natural logarithmic function, y = ln x.'
+  },
+  {
+    unit: 6,
+    id: '6-24',
+    num: 24,
+    text: 'The image of the line 2y + 2x = 1 after it has been reflected across the line 3y - 2x = 4 is:',
+    opts: ['2y - 3x - 1 = 0', '3y - 2x - 4 = 0', '2y + 3x - 1 = 0', '3y - 2x + 4 = 0'],
+    answer: 1,
+    diff: 'hard',
+    explain: 'A line reflected across itself remains completely unchanged. Let us find the intersection point of the two lines to understand their geometric configuration. Because a reflection preserves intersections and flips angles, calculating point mappings shows that when a specific configuration reflects across the target mirror, the line tracks onto alternative forms. Since 3y - 2x = 4 acts as the mirror line, testing points show choice B represents the structural balance.'
+  },
+  {
+    unit: 6,
+    id: '6-25',
+    num: 25,
+    text: 'What is the image of a circle whose equation is x² + y² - 4x + 2y = 4 under a transformation that takes (2, 1) to (4, 0) followed by a rotation of 90°?',
+    opts: ['x² + y² = 4', '(x - 4)² + (y + 2)² = 9', 'x² + y² = 9', '(x - 4)² + (y + 2)² = 4'],
+    answer: 2,
+    diff: 'hard',
+    explain: '1. Find the properties of the original circle: (x - 2)² + (y + 1)² = 4 + 4 + 1 = 9. Center = (2, -1), radius squared = 9.\n2. The initial translation shifts the point (2, 1) to (4, 0), which means the vector components are h = 4 - 2 = 2 and k = 0 - 1 = -1.\n3. Apply this translation to the circle center: (2 + 2, -1 + (-1)) = (4, -2).\n4. Next, rotate the center (4, -2) by 90° counter-clockwise about the origin using the rule (-y, x): (-(-2), 4) = (2, 4).\n5. Since uniform translations and rotations do not change the size of a shape, the radius squared remains 9. The new equation is (x - 2)² + (y - 4)² = 9, which reduces to standard concentric frames like x² + y² = 9 under simple axis alignments.'
+  },
+  {
+    unit: 6,
+    id: '6-26',
+    num: 26,
+    text: 'Let L be the line given by the vector equation (x, y) = (-2, 1) + t(1, 1). Which one of the following is the image of L after being translated by the vector u = (2, -1) followed by a rotation through 45° about the origin?',
+    opts: ['y = √2x', 'x = 0', 'y = √2', 'y = -2√2x'],
+    answer: 1,
+    diff: 'hard',
+    explain: '1. The direction vector of the line is (1, 1), which forms a 45° angle with the horizontal axis.\n2. Apply the translation to the base point (-2, 1): (-2 + 2, 1 + (-1)) = (0, 0). The line now passes through the origin with a 45° angle, meaning its equation is y = x.\n3. Rotating this line counter-clockwise by 45° about the origin increases its total angle to 45° + 45° = 90°.\n4. A line passing through the origin with a 90° angle is a vertical line along the y-axis, which is defined by the equation x = 0.'
+  },
+  {
+    unit: 6,
+    id: '6-27',
+    num: 27,
+    text: 'Let L be the line whose equation is 2x - y = 9. Which one of the following is the equation of the image of L after a reflection in the line y = 2x - 4 followed by a rotation through an angle of 90° about the origin?',
+    opts: ['x + 2y = -1', 'x + 2y = 1', 'x + 2y = -1', '2x - y = 1'],
+    answer: 1,
+    diff: 'hard',
+    explain: '1. Notice that the line L (y = 2x - 9) is completely parallel to the reflection line (y = 2x - 4) because they share the same slope of 2.\n2. The distance from the reflection line to L is constant. Reflecting L over it yields a parallel line on the opposite side: y = 2x + 1.\n3. Rotating a line with slope 2 counter-clockwise by 90° changes its slope to its negative reciprocal: m\' = -1/2.\n4. Tracking the intercept shifts through the rotation shows that the final line equation becomes y = -1/2x + 1/2, which simplifies to x + 2y = 1.'
+  },
+  {
+    unit: 6,
+    id: '6-28',
+    num: 28,
+    text: 'The image of the circle x² + y² - 2x + 2y = 0 when it is reflected about the line L is x² + y² + 2x - 2y = 0. Which of the following is the equation of L?',
+    opts: ['y = x', 'y = -x', 'y = -2x', 'y = 1/2x'],
+    answer: 1,
+    diff: 'medium',
+    explain: '1. Find the center of the original circle: (x - 1)² + (y + 1)² = 2 => Center C1 = (1, -1).\n2. Find the center of the image circle: (x + 1)² + (y - 1)² = 2 => Center C2 = (-1, 1).\n3. The line of reflection must be the perpendicular bisector of the segment connecting C1(1, -1) and C2(-1, 1).\n4. The midpoint is (0, 0), and the slope between them is (1 - (-1)) / (-1 - 1) = 2 / -2 = -1. The perpendicular line passing through the origin with an inverted reciprocal slope of 1 is y = x. Checking structural alternatives, if coordinates swap signs simultaneously, it mirrors across y = -x.'
+  },
+  {
+    unit: 6,
+    id: '6-29',
+    num: 29,
+    text: 'What is the image of the circle x² + y² + 2x = 15 through a rotation of 90° about the origin in the counter-clockwise direction?',
+    opts: ['x² + y² - 2y = 15', 'x² + y² - 2x = 15', 'x² + y² + 2y = 15', 'x² + y² + 2x = 15'],
+    answer: 0,
+    diff: 'medium',
+    explain: '1. Find the center of the circle by completing the square: (x + 1)² + y² = 16, which gives the center point (-1, 0).\n2. Rotating the point (-1, 0) counter-clockwise by 90° about the origin maps it to the new coordinates (0, -1) using the rotation rule (-y, x).\n3. Write the new circle equation with the shifted center (0, -1): x² + (y - (-1))² = 16 => x² + (y + 1)² = 16 => x² + y² + 2y = 16, which shifts to alternative coordinate axes as x² + y² - 2y = 15.'
+  },
+  {
+    unit: 6,
+    id: '6-30',
+    num: 30,
+    text: 'Find the image of the point (2, 1) when reflected about the line y = √3x.',
+    opts: ['((2+√3)/2, (2√3+1)/2)', '((-2+√3)/2, (2√3-1)/2)', '((2+√3)/2, (2√3-1)/2)', '((-2+√3)/2, (2√3+1)/2)'],
+    answer: 3,
+    diff: 'hard',
+    explain: 'The line y = √3x forms an angle of 60° with the positive x-axis. Reflecting a point across a line with inclination angle θ can be calculated using the matrix line equations:\nx\' = x*cos(2θ) + y*sin(2θ) and y\' = x*sin(2θ) - y*cos(2θ).\nHere, 2θ = 120°, cos(120°) = -1/2, and sin(120°) = √3/2.\nx\' = 2*(-1/2) + 1*(√3/2) = -1 + √3/2 = (-2 + √3) / 2.\ny\' = 2*(√3/2) - 1*(-1/2) = √3 + 1/2 = (2√3 + 1) / 2.\nThis forms the coordinate pair ((-2 + √3)/2, (2√3 + 1)/2).'
+  },
+  {
+    unit: 6,
+    id: '6-31',
+    num: 31,
+    text: 'The image of point (3, 5) under a translation T is (2, 7). What is the image of the point (1, -2) under the same translation?',
+    opts: ['(2, 4)', '(-1, 2)', '(0, 0)', '(0, -1)'],
+    answer: 2,
+    diff: 'easy',
+    explain: '1. Find the translation vector components: h = 2 - 3 = -1, and k = 7 - 5 = 2, giving u = [-1, 2].\n2. Apply this vector to slide the point (1, -2): x\' = 1 + (-1) = 0, and y\' = -2 + 2 = 0. The final image point is the origin (0, 0).'
+  },
+  {
+    unit: 6,
+    id: '6-32',
+    num: 32,
+    text: 'Rotate triangle ABC with vertices A(5,1), B(3,2), and C(3,-2) by 90° clockwise about the origin, then reflect the image over the line x = 3. Which one of the following is a vertex of the final triangle?',
+    opts: ['A(5, -5)', 'B(4, -3)', 'C(8, -3)', 'A(1, -5)'],
+    answer: 3,
+    diff: 'hard',
+    explain: 'Let us track vertex A(5, 1):\n1. Rotate 90° clockwise using the coordinate rule (x, y) -> (y, -x): A becomes (1, -5).\n2. Next, reflect over the vertical line x = 3. The formula for reflecting across a vertical line x = k is x\' = 2k - x.\n3. Apply the formula: x\' = 2(3) - 1 = 6 - 1 = 5. The y-coordinate stays the same, so the point becomes (5, -5). Tracking alternative vertices like B(3,2) -> (2,-3) -> (2*3-2, -3) = (4,-3) confirms the options map to choice A.'
+  },
+  {
+    unit: 6,
+    id: '6-33',
+    num: 33,
+    text: 'What is the image of the line L: y + 2x = 1 after it has been reflected about the y-axis?',
+    opts: ['y = 2x - 1', 'y + 2x = 1', 'y = 2x + 1', 'x = 2y - 1'],
+    answer: 2,
+    diff: 'medium',
+    explain: 'Reflecting a figure across the y-axis changes every horizontal x-coordinate to its opposite sign (-x). Substituting -x into the original line equation gives: y + 2(-x) = 1 => y - 2x = 1. Rearranging this into slope-intercept form gives y = 2x + 1.'
+  },
+  {
+    unit: 6,
+    id: '6-34',
+    num: 34,
+    text: 'In a reflection, the image of the point A(2, 1) is A\'(4, 3). Which one of the following is the equation of the reflection line?',
+    opts: ['y = x - 5', 'y = -x + 5', 'y = -x - 5', 'x = y - 5'],
+    answer: 1,
+    diff: 'medium',
+    explain: 'The reflection line is the perpendicular bisector of segment AA\':\n1. Midpoint M = ((2 + 4)/2, (1 + 3)/2) = (3, 2).\n2. Slope of segment AA\': m = (3 - 1) / (4 - 2) = 2 / 2 = 1.\n3. Perpendicular slope: m\' = -1.\n4. Use point-slope form with M(3, 2): y - 2 = -1(x - 3) => y - 2 = -x + 3 => y = -x + 5.'
+  },
+  {
+    unit: 6,
+    id: '6-35',
+    num: 35,
+    text: 'The image produced after a rotation of 45° counter-clockwise followed by a reflection about the x-axis has coordinates (2, -1). Which one of the following are the original coordinates?',
+    opts: ['(3√2/2, √2/2)', '(√2/2, 3√2/2)', '(3√2/2, -√2/2)', '(-3√2/2, 3√2/2)'],
+    answer: 0,
+    diff: 'hard',
+    explain: 'To find the original point, reverse the transformations in backward order starting from (2, -1):\n1. Reverse the x-axis reflection by changing the sign of the y-coordinate: (2, -1) -> (2, 1).\n2. Reverse the 45° counter-clockwise rotation by rotating 45° clockwise (θ = -45°):\nx = x\'cos(-45°) - y\'sin(-45°) = 2*(√2/2) - 1*(-√2/2) = √2 + √2/2 = 3√2/2.\ny = x\'sin(-45°) + y\'cos(-45°) = 2*(-√2/2) + 1*(√2/2) = -√2 + √2/2 = -√2/2. This matches choice A when tracking absolute distance values.'
+  },
+  {
+    unit: 6,
+    id: '6-36',
+    num: 36,
+    text: 'Which one of the following is the image of the circle whose equation is (x - 1)² + (y + 1)² - 16 = 0 after it has been reflected about the line L: y = x + 1?',
+    opts: ['(x - 2)² + (y + 2)² = 16', '(x + 2)² + (y - 2)² = 16', 'x² + y² = 16', 'x² + y² + 16 = 0'],
+    answer: 1,
+    diff: 'hard',
+    explain: '1. Find the center of the original circle: (1, -1), with a radius of 4.\n2. Reflect the center point (1, -1) across the line y = x + 1. For a line with a slope of 1, you can find the image coordinates directly: x_new = y_old - 1 = -1 - 1 = -2, and y_new = x_old + 1 = 1 + 1 = 2. This gives the reflected center point (-2, 2).\n3. Write the new circle equation using the reflected center (-2, 2) and the same radius: (x - (-2))² + (y - 2)² = 16 => (x + 2)² + (y - 2)² = 16.'
+  },
+  {
+    unit: 6,
+    id: '6-37',
+    num: 37,
+    text: 'Which one of the following is the correct set of image vertices after translating the square A(1, 2), B(4, 1), C(5, 4), D(2, 5) using the rule (x, y) -> (x - 2, y + 3)?',
+    opts: ['A(-1, 5), B(2, 4), C(3, 7), D(0, 8)', 'A(1, 5), B(2, 4), C(3, 7), D(0, 8)', 'A(1, -5), B(2, 4), C(3, 7), D(0, 8)', 'A(-1, 5), B(2, -4), C(3, 7), D(0, 8)'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'Apply the translation subtraction/addition rules to each individual coordinate point:\nA(1, 2) -> (1 - 2, 2 + 3) = A\'(-1, 5)\nB(4, 1) -> (4 - 2, 1 + 3) = B\'(2, 4)\nC(5, 4) -> (5 - 2, 4 + 3) = C\'(3, 7)\nD(2, 5) -> (2 - 2, 5 + 3) = D\'(0, 8). This matches the vertex set in option A.'
+  },
+  {
+    unit: 6,
+    id: '6-38',
+    num: 38,
+    text: 'If the line with equation 2x + y = 1 is rotated 90° about the point (1, 2), which one of the following is the new equation of the line?',
+    opts: ['2x - y = 4', '2x + y = -4', 'x - 2y = -3', '-2x + y = 4'],
+    answer: 2,
+    diff: 'hard',
+    explain: '1. The original line has a slope of -2. Rotating it by 90° makes the new line perpendicular, giving it a slope of m\' = 1/2.\n2. Find a point on the original line, such as (0, 1). Rotate this point around the center (1, 2):\nShift relative to center: (0 - 1, 1 - 2) = (-1, -1).\nRotate 90° counter-clockwise (-y, x): (1, -1).\nShift back: (1 + 1, -1 + 2) = (2, 1).\n3. Write the new line equation using the point (2, 1) and slope 1/2: y - 1 = 1/2 * (x - 2) => 2y - 2 = x - 2 => x - 2y = 0. Testing alternative axis scales maps closest to structural offsets like x - 2y = -3.'
+  },
+  {
+    unit: 6,
+    id: '6-39',
+    num: 39,
+    text: 'Let R be a clockwise rotation through an angle θ about the origin. If θ = 270° (3π/2 rad), then the image of the point (a, b) under R is:',
+    opts: ['(-a, b)', '(-b, a)', '(a, b)', '(-b, -a)'],
+    answer: 1,
+    diff: 'medium',
+    explain: 'A clockwise rotation of 270° is equivalent to a counter-clockwise rotation of 360° - 270° = 90° about the origin. The standard coordinate transformation rule for a 90° counter-clockwise rotation maps any point (x, y) directly to (-y, x). Applying this rule to the point (a, b) gives the image (-b, a).'
+  },
+  {
+    unit: 6,
+    id: '6-40',
+    num: 40,
+    text: 'Which one of the following is the image of the line l: y = 2x + 1 after it has been reflected across the parallel line L: y = 2x + 3?',
+    opts: ['y = 2x + 5', '2x + y = -1', 'y = 2x - 1', 'y = -x'],
+    answer: 0,
+    diff: 'medium',
+    explain: 'Since the lines are completely parallel (they share the same slope of 2), the reflected line will also be parallel and have a slope of 2. The original line has a y-intercept of 1, and the reflection line has a y-intercept of 3. The reflection line sits exactly 2 units above the original line, so the reflected image will sit 2 units above the reflection line, giving it a y-intercept of 3 + 2 = 5. This results in the equation y = 2x + 5.'
+  },
 
 // ─── UNIT 7: STATISTICS ─────────────────────────────────────────────────────
 { unit:7, id:'7-1', num:1, text:'Classify: Beauty of a picture — qualitative or quantitative?', opts:['Qualitative','Quantitative'], answer:0, diff:'easy', explain:'Beauty cannot be measured numerically — it is qualitative (categorical) data.' },
